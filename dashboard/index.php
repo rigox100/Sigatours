@@ -11,14 +11,14 @@ if($_SESSION['idRol']== null){
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <!-- Author Meta -->
-	<meta name="author" content="Holiday Travel">
+	<meta name="author" content="Sigatours">
 	 <!-- Meta Keyword -->
-	 <meta name="keywords" content="Holiday Travel">
+	 <meta name="keywords" content="Sigatours">
     <!-- Meta Description -->
     <meta name="description" content="">
   <!--Icon-->
-  <link rel="shortcut icon" href="assets/img/favicon.png">
-  <title>CPANEL | HolidayTravel</title>
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <title>CPANEL | Sigatours</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
@@ -123,7 +123,7 @@ if($_SESSION['idRol']== null){
               <li class="nav-item">
                 <a href="modules/travel_agencies/index.php" class="nav-link">
                   <i class="fa fa-hotel"></i>
-                  <p>Solicitudes de Agencias</p>
+                  <p>Solicitudes de Franquicias</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -172,7 +172,7 @@ if($_SESSION['idRol']== null){
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <img src="assets/img/logo_HT.png" alt="Holiday Travel" class="img-fluid d-block mx-auto" style="width: 70%;">
+            <img src="assets/img/logo_sigatours1.png" alt="Sigatours" class="img-fluid d-block mx-auto" style="width: 70%; margin-top:100px;">
           </div>
           <!-- /.col-12 -->
         </div>
@@ -192,7 +192,7 @@ if($_SESSION['idRol']== null){
       
     </div>
     <!-- Default to the left -->
-    <p>Copyright &copy; <?php echo date('Y') ?>. Todos los derechos reservados | Holiday Travel</p>
+    <p>Copyright &copy; <?php echo date('Y') ?>. Todos los derechos reservados | Sigatours Corporativo Turístico</p>
   </footer>
 </div>
 <!-- ./wrapper -->

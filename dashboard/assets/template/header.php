@@ -11,7 +11,7 @@ if($_SESSION['idRol']== null){
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>CPANEL | Holiday Travel</title>
+  <title>CPANEL | Sigatours</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="../../assets/plugins/fontawesome-free/css/all.min.css">
@@ -119,7 +119,7 @@ if($_SESSION['idRol']== null){
               <li class="nav-item">
                 <a href="../travel_agencies/index.php" class="nav-link">
                   <i class="fa fa-hotel"></i>
-                  <p>Solicitudes de Agencias</p>
+                  <p>Solicitudes de Franquicias</p>
                 </a>
               </li>
               <li class="nav-item">

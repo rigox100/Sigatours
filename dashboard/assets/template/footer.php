@@ -15,7 +15,7 @@
       
     </div>
     <!-- Default to the left -->
-    <p>Copyright &copy; <?php echo date('Y') ?>. Todos los derechos reservados | Holiday Travel</p>
+    <p>Copyright &copy; <?php echo date('Y') ?>. Todos los derechos reservados | Sigatours Corporativo Turístico</p>
   </footer>
 </div>
 <!-- ./wrapper -->

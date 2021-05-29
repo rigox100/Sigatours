@@ -15,6 +15,7 @@ require_once 'class/Usuario.php';
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Theme style -->
    <link rel="stylesheet" href="assets/css/adminlte.css">
+   <link rel="shortcut icon" href="assets/img/favicon.ico">
 <!-- jQuery -->
 <script src="assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -49,7 +50,7 @@ require_once 'class/Usuario.php';
         <h5 class="modal-title" id="exampleModalLongTitle">Acceso al CPANEL</h5>
       </div>
       <div class="modal-body">
-      <img src="assets/img/logo2.png" class="d-block mx-auto w-50">
+      <img src="assets/img/logo.png" class="d-block mx-auto w-50">
       <br>
       
       <form action="login.php" method="post">
