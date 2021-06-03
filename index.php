@@ -1,79 +1,32 @@
 <?php
-require_once './dashboard/class/Agencia.php';
+require_once './dashboard/class/Franquicia.php';
 
-$idAgencia = (isset($_REQUEST['idAgencia'])) ? $_REQUEST['idAgencia'] : null;
+$idFranquicia = (isset($_REQUEST['idFranquicia'])) ? $_REQUEST['idFranquicia'] : null;
 
-if ($idAgencia) {
-    $agencia = Agencia::buscarPorId($idAgencia);
+if ($idFranquicia) {
+    $franquicia = Franquicia::buscarPorId($idFranquicia);
 } else {
-    $agencia = new Agencia();
+    $franquicia = new Franquicia();
 }
 
 //Request
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $agencia->setRazonSocial($_POST['razon_social']);
-    $agencia->setNombreComercial($_POST['nombre_comercial']);
-    $agencia->setRFC($_POST['rfc']);
-    $agencia->setCalle($_POST['calle']);
-    $agencia->setNumExterior($_POST['num_exterior']);
-    $agencia->setNumInterior($_POST['num_interior']);
-    $agencia->setColonia($_POST['colonia']);
-    $agencia->setMunicipio($_POST['municipio']);
-    $agencia->setCiudad($_POST['ciudad']);
-    $agencia->setEstado($_POST['estado']);
-    $agencia->setCP($_POST['cp']);
-    $agencia->setPais($_POST['pais']);
-    $agencia->setMoneda($_POST['moneda']);
-    $agencia->setTel1($_POST['tel1']);
-    $agencia->setTel2($_POST['tel2']);
-    $agencia->setTel3($_POST['tel3']);
-    $agencia->setPaginaWeb($_POST['pagina_web']);
-    $agencia->setActivo('Si');
-    $agencia->setClaveBackOffice($_POST['clave_back_office']);
-    $agencia->setHeaderFooter('Activo');
-    $agencia->setMenu('Activo');
-    //$agencia->setObservaciones($_POST['observaciones']);
-    $agencia->setNombreContacto($_POST['nombre_contacto']);
-    $agencia->setApellidoPaterno($_POST['apellido_paterno']);
-    $agencia->setApellidoMaterno($_POST['apellido_materno']);
-    $agencia->setCargo($_POST['cargo']);
-    $agencia->setSexo($_POST['sexo']);
-    $agencia->setTelDirecto($_POST['tel_directo']);
-    $agencia->setTelMovil($_POST['tel_movil']);
-    $agencia->setEmailContacto($_POST['email_contacto']);
-    $agencia->setEmailServidor($_POST['email_servidor']);
-    $agencia->setClave($_POST['clave']);
-    $agencia->setServidorSMTP($_POST['servidor_smtp']);
-    $agencia->setPortSMTP($_POST['port_smtp']);
-    $agencia->setFechaCreacion(date('Y-m-d'));
+    $franquicia->setNombreCompleto($_POST['nombre_completo']);
+    $franquicia->setEmail($_POST['email']);
+    $franquicia->setCiudad($_POST['ciudad']);
+    $franquicia->setTelefono($_POST['telefono']);
+    $franquicia->setComentarios($_POST['comentarios']);
+    $franquicia->setFechaCreacion(date('Y-m-d'));
 
+    $franquicia->guardar();
 
-    $rutaServidor = 'uploads/images';
-    $rutaServidorFiles = 'uploads/files';
-
-    if ($_FILES['url_img1']['name'] != null) {
-
-        if (!is_dir('uploads/images')) {
-            mkdir('uploads/images', 0777, true);
-        }
-
-        $rutaTemporal1 = $_FILES['url_img1']['tmp_name'];
-        $extension = pathinfo($_FILES['url_img1']['name'], PATHINFO_EXTENSION);
-        $nombreImagen1 = date('YmdHis') . '_logo.' . $extension;
-        $rutaDestino1 = $rutaServidor . '/' . $nombreImagen1;
-        unlink($_POST['logo']);
-        move_uploaded_file($rutaTemporal1, $rutaDestino1);
-        $agencia->setLogo($rutaDestino1);
-    } else {
-        $agencia->setLogo($_POST['logo']);
-    }
-
-
-    $agencia->guardar();
-
-    if ($idAgencia != "") {
-        header('Location: index.php?status_code=2');
+    if ($idFranquicia != "") {
+        echo '<script>
+        alert("Ha surgido un error");
+        
+        window.location.href="index.php";
+        </script>';
     } else {
 
         //header('Location: index.php?status_code=1');
@@ -91,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Holidaytravel">
+    <meta name="description" content="Sigatours">
     <meta name="keywords" content="sigatours, travel, viajar, viajes, agencia">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -114,14 +67,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="./dashboard/assets/plugins/sweetAlert2/sweetalert2.min.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
 
     <link rel="stylesheet" href="./dashboard/assets/css/style.css" type="text/css">
     <!-- <link rel="stylesheet" href="./dashboard/assets/css/adminlte.css" type="text/css"> -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
 
 </head>
 
@@ -346,39 +303,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </section>
     <!-- Hero Section End -->
 
-    <!-- About Us Section Begin -->
-    <!-- <section class="aboutus-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-text">
-                        <div class="section-title">
-                            <span>About Us</span>
-                            <h2>Intercontinental LA <br />Westlake Hotel</h2>
-                        </div>
-                        <p class="f-para">Sona.com is a leading online accommodation site. We’re passionate about travel. Every day, we inspire and reach millions of travelers across 90 local websites in 41 languages.
-                        </p>
-                        <p class="s-para">So when it comes to booking the perfect hotel, vacation rental, resort, apartment, guest house, or tree house, we’ve got you covered.</p>
-                        <a href="#" class="primary-btn about-btn">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-pic">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img src="img/about/about-1.jpg" alt="">
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="img/about/about-2.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- About Us Section End -->
-
     <!-- Services Section End -->
     <section class="services-section spad" id="franquicias">
 
@@ -399,41 +323,42 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </div>
             </div>
+            <br>
             <div class="row">
-                <div class="col-lg-4 col-md-4 ">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
                     <div class="section-title">
-                        <p class="text-justify partext"> <strong> EN LA INDRUSTRIA DEL TURISMO</strong></p>
-                        <ul class="text-justify">
+                        <p class="text-justify partext ml-4"> <strong> EN LA INDRUSTRIA DEL TURISMO</strong></p>
+                        <ul class="text-justify quitpoint">
 
-                            <li> Lorem ipsum dolor sit amet consectetur. </li>
-                            <li> Suscipit, incidunt! Architecto aut dolor. </li>
-                            <li> Laboriosam quis molestias tenetur ea. </li>
-                            <li> Natus suscipit veritatis explicabo laborum hic. </li>
+                            <li> <i class="far fa-check-circle partext2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
+                            <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
+                            <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
+                            <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
 
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4  ">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12 ">
                     <div class="section-title">
-                        <p class="text-justify partext"> <strong> EN OTROS GIROS</strong></p>
-                        <ul class="text-justify">
+                        <p class="text-justify partext ml-5"> <strong> EN OTROS GIROS</strong></p>
+                        <ul class="text-justify quitpoint">
 
-                            <li> Lorem ipsum dolor sit amet consectetur. </li>
-                            <li> Suscipit, incidunt! Architecto aut dolor. </li>
-                            <li> Laboriosam quis molestias tenetur ea. </li>
-                            <li> Natus suscipit veritatis explicabo laborum hic. </li>
+                        <li> <i class="far fa-check-circle partext2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
+                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
+                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
+                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
 
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4  ">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
                     <div class="section-title">
-                        <p class="text-justify partext"> <strong> VENTAJAS DE SIGATOURS</strong></p>
-                        <ul class="text-justify">
-                            <li> Lorem ipsum dolor sit amet consectetur. </li>
-                            <li> Suscipit, incidunt! Architecto aut dolor. </li>
-                            <li> Laboriosam quis molestias tenetur ea. </li>
-                            <li> Natus suscipit veritatis explicabo laborum hic. </li>
+                        <p class="text-justify partext ml-4"> <strong> VENTAJAS DE SIGATOURS</strong></p>
+                        <ul class="text-justify quitpoint">
+                        <li> <i class="far fa-check-circle partext2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
+                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
+                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
+                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
 
                         </ul>
                     </div>
@@ -453,6 +378,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </div>
             </div>
+            <br>
             <div class="row">
 
 
@@ -463,21 +389,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if (count($promo) > 0) :
                 ?>
                     <?php foreach ($promo as $item) : ?>
-                        <div class="col-md-4">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                             <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="./img/test.jpg" alt="Card image cap">
+                               
                                 <div class="card-body">
 
-                                    <p class="card-text"><i class="far fa-check-circle partext"></i>&nbsp;&nbsp;No Necesitas Local Comercial.</p>
-                                    <p class="card-text"><i class="far fa-check-circle partext"></i>&nbsp;&nbsp;El mejor buscador de precios.</p>
-                                    <p class="card-text"><i class="far fa-check-circle partext"></i>&nbsp;&nbsp;Facturas en Línea Incluidas.</p>
-                                    <p class="card-text"><i class="far fa-check-circle partext"></i>&nbsp;&nbsp;Soporte Técnico.</p>
-                                    <p class="card-text"><i class="far fa-check-circle partext"></i>&nbsp;&nbsp;Página Web con Venta en Línea.</p>
-                                    <p class="card-text"><i class="far fa-check-circle partext"></i>&nbsp;&nbsp;Potente Motor de Reservas en línea.</p>
-                                    <br>
-                                    <div class="text-center">
-                                        <a href="#" class="btn btn-danger">COMENZAR AHORA</a>
-                                    </div>
+                                <a href="#formulario"><img class="img-fluid" src="./dashboard/modules/promos/<?php echo $item['url_imagen1']; ?>"></a>
+                                    
+                           
 
                                 </div>
                             </div>
@@ -486,7 +405,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <?php endforeach; ?>
                 <?php else : ?>
                     <div class="">
-                        <p class="alert alert-info justify-content-center"> No hay promociones para mostrar </p>
+                        <p class="alert alert-info justify-content-center"> No hay franquicias para mostrar </p>
                     </div>
                 <?php endif; ?>
 
@@ -502,37 +421,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="section-title">
-                        <h3 class="negrita">Forma parte de nuestra red de Franquicias</h3>
+                        <h3 class="negrita" id="formulario">Forma parte de nuestra red de Franquicias</h3>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 ">
-                    <form>
-                    <div class="form-group">
-                            <label for="inputAddress2" class="partext negrita">Nombre Completo:</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Tu Nombre Completo">
+           
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-8 ">
+                    <form action="index.php" method="post"   id="formu">
+                    <div class="form-group" >
+                            <label for="nombre_completo" class="partext negrita">Nombre Completo:</label>
+                            <input type="text" class="form-control" name="nombre_completo" id="nombre_completo" placeholder="Tu Nombre Completo" required>
                         </div>
                       
                             <div class="form-group">
-                                <label for="inputEmail4"  class="partext negrita">Email:</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Tu Email">
+                                <label for="email"  class="partext negrita">Email:</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Tu Email" required>
                             </div>
         
                 
                         <div class="form-group">
-                            <label for="inputAddress"  class="partext negrita">Ciudad:</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Ciudad">
+                            <label for="ciudad"  class="partext negrita">Ciudad:</label>
+                            <input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Ciudad" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputAddress2"  class="partext negrita">Teléfono:</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Teléfono (con lada)">
+                            <label for="telefono"  class="partext negrita">Teléfono:</label>
+                            <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Teléfono (con lada)" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputAddress2"  class="partext negrita">Comentarios:</label>
-                            <textarea class="form-control" id="mensaje" rows="5" name="mensaje" placeholder="Comentarios"></textarea>
+                            <label for="comentarios"  class="partext negrita">Comentarios:</label>
+                            <textarea class="form-control" rows="10" name="comentarios" id="comentarios" placeholder="Comentarios" required></textarea>
                         </div>
                 
                     
@@ -541,12 +461,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
 
             </div>
+            
         </div>
     </section>
 
 
     <!-- Testimonial Section Begin -->
-    <section class="testimonial-section spad" id="promociones">
+    <section class="testimonial-section spad" id="destinos">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -560,15 +481,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                 <?php
-                include_once './dashboard/class/Promocion.php';
-                $promo = Promocion::recuperarTodos();
+                include_once './dashboard/class/Destinos.php';
+                $promo = Destinos::recuperarTodos();
 
                 if (count($promo) > 0) :
                 ?>
                     <?php foreach ($promo as $item) : ?>
                         <div class="col-md-4">
                             <div class="hovereffects">
-                                <img src="./dashboard/modules/promos/<?php echo $item['url_imagen1']; ?>" class="img-fluid" height="300px" width="100%" alt="images">
+                                <img src="./dashboard/modules/destinos/<?php echo $item['url_imagen1']; ?>" class="img-fluid" height="300px" width="100%" alt="images">
                                 <div class="overlay">
                                     <!-- <h2>Awesome Temples</h2> -->
                                     <a class="info" href="#" data-toggle="modal" data-target="#myModal1">Más Información...</a>
@@ -588,7 +509,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <img src="./dashboard/modules/promos/<?php echo $item['url_imagen1']; ?>" class="img-fluid" width="100%" height="100%">
+                                            <img src="./dashboard/modules/destinos/<?php echo $item['url_imagen1']; ?>" class="img-fluid" width="100%" height="100%">
                                             <hr>
                                             <a class="btn btn-warning boto btn-lg btn-block mt-2" href="./dashboard/modules/promos/<?php echo $item['descripcion']; ?>" download="Itinerario.pdf" role="button">Descargar Itinerario</a>
 
@@ -606,314 +527,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <?php endforeach; ?>
                 <?php else : ?>
                     <div class="">
-                        <p class="alert alert-info justify-content-center"> No hay promociones para mostrar </p>
+                        <p class="alert alert-info justify-content-center"> No hay destinos para mostrar </p>
                     </div>
                 <?php endif; ?>
 
             </div>
         </div>
     </section>
-
-    <div class="row justify-content-center">
-        <div style="height:35px;" class="col-12 d-md-none d-lg-none"></div>
-
-        <div class="col-md-10">
-
-            <div class="card" style="border: none;">
-
-                <div class="card-body">
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3 class="modal-title" id="exampleModalLabel" class="text-center" style="font-size: calc(1.0em + 1vw);">Registrar Nueva Agencia</h3>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="index.php" method="post" id="slider_form" enctype="multipart/form-data">
-
-
-                                        <h4 class="section-form">Información</h4>
-
-                                        <div class="form-group">
-                                            <input class="form-control" type="hidden" name="idAgencia" id="idAgencia" value="">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <input class="form-control" type="hidden" name="logo" id="logo" value="">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="razon_social">Razón Social <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="razon_social" id="razon_social" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="nombre_comercial">Nombre Comercial <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="nombre_comercial" id="nombre_comercial" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="rfc">RFC <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="rfc" id="rfc" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="calle">Calle <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="calle" id="calle" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="num_exterior">Número Exterior <span class="text text-danger">*</span></label>
-                                            <input class="form-control" style="width: 20%;" type="text" name="num_exterior" id="num_exterior" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="num_interior">Número Interior</label>
-                                            <input class="form-control" style="width: 20%;" type="text" name="num_interior" id="num_interior" value="">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="colonia">Colonia <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="colonia" id="colonia" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="municipio">Municipio <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="municipio" id="municipio" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="ciudad">Ciudad <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="ciudad" id="ciudad" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="estado">Estado <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="estado" id="estado" value="" required>
-                                        </div>
-
-
-                                        <div class="form-group">
-                                            <label for="cp">Código Postal <span class="text text-danger">*</span></label>
-                                            <input class="form-control" style="width: 20%;" type="text" name="cp" id="cp" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="pais">País <span class="text text-danger">*</span></label>
-                                            <select id="pais" name="pais" class="form-control w-100 mb-3" required>
-                                                <option value=''>Selecciona un país</option>
-                                                <option value='Antigua y Barbuda'>Antigua y Barbuda</option>
-                                                <option value='Argentina'>Argentina</option>
-                                                <option value='Aruba'>Aruba</option>
-                                                <option value='Bahamas'>Bahamas</option>
-                                                <option value='Barbados'>Barbados</option>
-                                                <option value='Belice'>Belice</option>
-                                                <option value='Bolivia'>Bolivia</option>
-                                                <option value='Brasil'>Brasil</option>
-                                                <option value='Caribe'>Caribe</option>
-                                                <option value='Chile'>Chile</option>
-                                                <option value='Colombia'>Colombia</option>
-                                                <option value='Costa Rica'>Costa Rica</option>
-                                                <option value='Cuba'>Cuba</option>
-                                                <option value='Dominica'>Dominica</option>
-                                                <option value='Ecuador'>Ecuador</option>
-                                                <option value='El Salvador'>El Salvador</option>
-                                                <option value='Grenada'>Grenada</option>
-                                                <option value='Guadalupe'>Guadalupe</option>
-                                                <option value='Guatemala'>Guatemala</option>
-                                                <option value='Guyana'>Guyana</option>
-                                                <option value='Guyana Francesa'>Guyana Francesa</option>
-                                                <option value='Haití'>Haití</option>
-                                                <option value='Honduras'>Honduras</option>
-                                                <option value='Islas Caimán'>Islas Caimán</option>
-                                                <option value='Islas Turcas y Caicos'>Islas Turcas y Caicos</option>
-                                                <option value='Islas Vírgenes'>Islas Vírgenes</option>
-                                                <option value='Jamaica'>Jamaica</option>
-                                                <option value='Martinica'>Martinica</option>
-                                                <option value='México' selected>México</option>
-                                                <option value='Nicaragua'>Nicaragua</option>
-                                                <option value='Panamá'>Panamá</option>
-                                                <option value='Paraguay'>Paraguay</option>
-                                                <option value='Perú'>Perú</option>
-                                                <option value='Puerto Rico'>Puerto Rico</option>
-                                                <option value='República Dominicana'>República Dominicana</option>
-                                                <option value='San Bartolomé'>San Bartolomé</option>
-                                                <option value='San Cristóbal y Nieves'>San Cristóbal y Nieves</option>
-                                                <option value='San Vicente y las Granadinas'>San Vicente y las Granadinas</option>
-                                                <option value='Santa Lucía'>Santa Lucía</option>
-                                                <option value='Suriname'>Suriname</option>
-                                                <option value='Trinvaluead y Tobago'>Trinvaluead y Tobago</option>
-                                                <option value='Uruguay'>Uruguay</option>
-                                                <option value='Venezuela'>Venezuela</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="form-group ">
-                                            <label for="moneda">Moneda <span class="text text-danger">*</span></label>
-                                            <select name="moneda" id="moneda" class="form-control w-100 mb-3" required>
-                                                <option value=''>Selecciona una moneda</option>
-                                                <option value='Peso Mexicano' selected>Peso mexicano</option>
-                                                <option value='Dólar Estadounidense'>Dólar estadounidense</option>
-                                                <option value='Peso Argentino'>Peso argentino</option>
-                                                <option value='Dólar de Barbados'> Dólar de Barbados</option>
-                                                <option value='Dólar Beliceño'> Dólar beliceño</option>
-                                                <option value='Boliviano'>Boliviano</option>
-                                                <option value='Real Brasileño'> Real brasileño</option>
-                                                <option value='Dólar Canadiense'>Dólar canadiense</option>
-                                                <option value='Peso Chileno'>Peso chileno</option>
-                                                <option value='Peso Colombiano'>Peso colombiano</option>
-                                                <option value='Colón Costarricense'> Colón costarricense</option>
-                                                <option value='Peso Cubano'> Peso cubano</option>
-                                                <option value='Dólar del Caribe Oriental'> Dólar del Caribe Oriental</option>
-                                                <option value='Quetzal '> Quetzal </option>
-                                                <option value='Dolar Guyanés'>Dolar guyanés</option>
-                                                <option value='Gourde'> Gourde</option>
-                                                <option value='Lempira'> Lempira</option>
-                                                <option value='Dólar Jamaicano'> Dólar jamaicano</option>
-                                                <option value='Córdoba'> Córdoba</option>
-                                                <option value='Guaraní'> Guaraní</option>
-                                                <option value='Sol Peruano'> Sol Peruano</option>
-                                                <option value='Peso Dominicano'> Peso dominicano</option>
-                                                <option value='Dólar Surinamés'>Dólar surinamés</option>
-                                                <option value='Dólar Trinitense'> Dólar trinitense</option>
-                                                <option value='Peso Uruguayo'> Peso uruguayo</option>
-                                                <option value='Bolívar'> Bolívar</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="telefonos">Teléfonos <span class="text text-danger">*</span></label>
-                                            <input class="form-control w-50" type="text" name="tel1" id="tel1" value="" placeholder="Número Telefónico 1" required>
-                                            <input class="form-control w-50 mt-3" type="text" name="tel2" id="tel2" value="" placeholder="Número Telefónico 2">
-                                            <input class="form-control w-50 mt-3" type="text" name="tel3" id="tel3" value="" placeholder="Número Telefónico 3">
-                                        </div>
-
-                                        <h4 class="section-form">Configuraciones del sitio web</h4>
-
-                                        <div class="form-group">
-                                            <label for="pagina_web">Página web</label>
-                                            <input class="form-control" type="text" name="pagina_web" id="pagina_web" value="">
-                                        </div>
-                                        <hr>
-                                        <div class="form-group">
-                                            <input type="hidden" id="activo" name="activo" value="Sí">
-                                        </div>
-
-                                        <div class="form-group">
-
-                                            <input class="form-control" type="hidden" name="clave_back_office" id="clave_back_office" value="">
-                                        </div>
-
-                                        <!-- <h4 class="section-form">Configuraciones del sitio web</h4>  -->
-
-                                        <div class="form-group">
-                                            <label for="url_img1">Logo </label>
-                                            <br><small class="text text-danger"> Si cuenta con el logo de la empresa, puede subir la imagen con dimensiones de 180 x 180 píxeles en formato JPG o PNG</small>
-
-
-                                            <input type="file" class="form-control-file" name="url_img1" id="url_img1" ?>
-                                        </div>
-
-
-                                        <h4 class="section-form">Datos del contacto</h4>
-
-                                        <div class="form-group">
-                                            <label for="nombre_contacto">Nombre <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="nombre_contacto" id="nombre_contacto" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="apellido_paterno">Apellido Paterno <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="apellido_paterno" id="apellido_paterno" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="apellido_materno">Apellido Materno <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="apellido_materno" id="apellido_materno" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="cargo">Cargo <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="cargo" id="cargo" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="logo">Sexo <span class="text text-danger">*</span></label>
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input type="radio" class="form-check-input" name="sexo" value="M" checked>Masculino
-                                                </label>
-                                                <label class="form-check-label" style="margin-left: 50px;">
-                                                    <input type="radio" class="form-check-input" name="sexo" value="F">Femenino
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="tel_directo">Teléfono Directo <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="text" name="tel_directo" id="tel_directo" value="" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="tel_movil">Teléfono Móvil</label>
-                                            <input class="form-control" type="text" name="tel_movil" id="tel_movil" value="">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="email_contacto">Correo Electrónico <span class="text text-danger">*</span></label>
-                                            <input class="form-control" type="email" name="email_contacto" id="email_contacto" value="" required>
-                                        </div>
-
-                                        <!-- <h4 class="section-form">Dirección para el envío de correos electrónicos</h4>  -->
-
-
-                                        <div class="form-group">
-                                            <!-- <label for="email_servidor">Correo Electrónico</label> -->
-                                            <input class="form-control" type="hidden" name="email_servidor" id="email_servidor" value="">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <!-- <label for="clave">Clave</label> -->
-                                            <input class="form-control" type="hidden" name="clave" id="clave" value="">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <!-- <label for="servidor_smtp">Servidor SMTP</label> -->
-                                            <input class="form-control" type="hidden" name="servidor_smtp" id="servidor_smtp" value="">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <!-- <label for="smtp">Port SMTP</label> -->
-                                            <input class="form-control" type="hidden" name="port_smtp" id="port_smtp" value="">
-                                        </div>
-
-
-
-                                        <div class="form-group">
-                                            <input type="submit" class="btn btn-default btn-custom" value="Guardar información">
-                                        </div>
-
-
-                                    </form>
-                                </div>
-
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
 
 
     <!-- Footer Section Begin -->
@@ -945,8 +565,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 443-688-9901 </li>
                                 <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-688-2572 </li>
                                 <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-688-3468 </li>
-                                <li><i class="fa fa-envelope icolor"></i>&nbsp; agencias@holidaytravel.com.mx</li>
-                                <li><i class="fa fa-address-book-o icolor"></i>&nbsp; Calle Basilia # 135, Col. Lomas de las Américas. <br> C.P. 58254. Morelia, Mich.</li>
+                                <li><i class="fa fa-envelope icolor"></i>&nbsp; agencias@sigatours.com.mx</li>
+                                <li><i class="fa fa-address-book-o icolor"></i>&nbsp; Calle Brasilia # 135, Col. Lomas de las Américas. <br> C.P. 58254. Morelia, Mich.</li>
 
 
                             </ul>
@@ -982,7 +602,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> Todos los derechos reservados | Holidaytravel
+                                </script> Todos los derechos reservados | Sigatours Corporativo Turístico
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
@@ -1004,6 +624,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
     <!-- Search model end -->
 
+
+
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -1013,6 +635,108 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="./dashboard/assets/plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.validator.addMethod("formAlphanumeric", function(value, element) {
+                var pattern1 = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
+                return this.optional(element) || pattern1.test(value);
+            }, "El campo debe tener un valor alfanumérico");
+
+            $.validator.addMethod("email", function(value, element) {
+                var pattern2 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/;
+                return this.optional(element) || pattern2.test(value);
+            }, "Debe ingresar un email válido");
+
+
+            $("#formu").validate({
+
+                wrapper: 'span',
+                errorPlacement: function(error, element) {
+                    error.css({
+                        'padding-left': '10px',
+                        'margin-right': '20px',
+                        'padding-bottom': '2px',
+                        'color': 'red',
+                        'font-size': 'small'
+                    });
+                    error.addClass("arrow")
+                    error.insertAfter(element);
+                },
+
+
+                rules: {
+                    nombre_completo: {
+                        required: true,
+                        minlength: 4,
+                        maxlength: 100,
+                        formAlphanumeric: true
+                    },
+                    email: {
+                        required: true,
+                        maxlength: 50,
+                        email: true
+                    },
+                    ciudad: {
+                        required: true,
+                        minlength: 4,
+                        maxlength: 30,
+                       
+                    },
+                    telefono: {
+                        required: true,
+                        minlength: 10,
+                        maxlength: 10
+                    },
+                
+                    comentarios: {
+                        required: true,
+                        maxlength: 500
+                    }
+                },
+    
+
+                messages: {
+
+                    nombre_completo: {
+                        required: 'Por favor introduzca su nombre',
+                        formAlphanumeric: "El nombre solo puede contener letras",
+                        minlength: "Debe tener al menos 5 caracteres",
+                        maxlength: "Solo se admite un máximo de 100 caracteres"
+                    },
+                    email: {
+                        required: "Por favor introduzca su email",
+                        maxlength: "Solo se admite un máximo de 50 caracteres",
+                        email: "Debe ingresar un email válido"
+                    },
+                    ciudad: {
+                        required: "Por favor introduzca su ciudad",
+                        minlength: "Debe contener al menos 4 caracteres",
+                        maxlength: "Solo se admite un máximo de 30 caracteres"
+
+                    },
+
+                    telefono: {
+                        required: "Por favor introduzca un teléfono de contacto",
+                        minlength: "Ingrese un teléfono válido de 10 dígitos",
+                        maxlength: "Ingrese un teléfono válido de 10 dígitos"
+
+                    },
+                    comentarios: {
+                        required: "Porfavor introduzca una breve descripción",
+                        maxlength: "Solo se admite un máximo de 500 caracteres"
+                    },
+
+                },
+
+
+
+            });
+
+        });
+    </script>
+
+
 
 </body>
 

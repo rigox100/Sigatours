@@ -131,7 +131,13 @@ if($_SESSION['idRol']== null){
               <li class="nav-item">
                 <a href="../promos/index.php" class="nav-link">
                   <i class="fas fa-tags"></i>
-                  <p>Promociones</p>
+                  <p>Franquicias</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../destinos/index.php" class="nav-link">
+                  <i class="fas fa-tags"></i>
+                  <p>Destinos</p>
                 </a>
               </li>
             </ul>

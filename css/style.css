@@ -37,8 +37,16 @@
     font-weight: 700 !important;
 }
 
+.quitpoint {
+    list-style: none !important;
+}
+
 .partext {
     color: #c64446 !important;
+}
+
+.partext2 {
+    color: #354d95 !important;
 }
 
 .icolor {
@@ -743,8 +751,8 @@ ol {
 .booking-form {
     background: #ffffff;
     padding: 44px 40px 50px 40px;
-    border-radius: 34px;
-    box-shadow: #3ca09026 0.1em 0.1em 0.2em;
+    border-radius: 10px;
+    box-shadow: #354d95cc 0.1em 0.1em 0.1em 0.1em;
 }
 
 .booking-form h3 {
@@ -840,7 +848,7 @@ ol {
 }
 
 .booking-form form button:hover {
-    background: #eec62c;
+    background: #354d95;
     border: 1px solid #1f2e3e;
 }
 

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-06-2021 a las 05:13:48
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 7.3.25
+-- Tiempo de generación: 29-05-2021 a las 17:29:57
+-- Versión del servidor: 10.4.18-MariaDB
+-- Versión de PHP: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -70,67 +70,6 @@ CREATE TABLE `agencias` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `destinos`
---
-
-CREATE TABLE `destinos` (
-  `idPromocion` int(11) NOT NULL,
-  `titulo` varchar(100) NOT NULL,
-  `url_imagen1` varchar(200) NOT NULL,
-  `descripcion` varchar(200) DEFAULT NULL,
-  `fecha_publicacion` date NOT NULL,
-  `visible` tinyint(1) NOT NULL DEFAULT 1,
-  `servicio` text DEFAULT NULL,
-  `hotel` varchar(50) DEFAULT NULL,
-  `precio` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `destinos`
---
-
-INSERT INTO `destinos` (`idPromocion`, `titulo`, `url_imagen1`, `descripcion`, `fecha_publicacion`, `visible`, `servicio`, `hotel`, `precio`) VALUES
-(1, 'uno', 'uploads/images/20210603050219_promocion.jpg', '', '2021-06-03', 1, NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `franquicias`
---
-
-CREATE TABLE `franquicias` (
-  `idFranquicia` int(11) NOT NULL,
-  `nombre_completo` varchar(100) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `ciudad` varchar(50) DEFAULT NULL,
-  `telefono` varchar(20) DEFAULT NULL,
-  `comentarios` text DEFAULT NULL,
-  `fecha_creacion` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `franquicias`
---
-
-INSERT INTO `franquicias` (`idFranquicia`, `nombre_completo`, `email`, `ciudad`, `telefono`, `comentarios`, `fecha_creacion`) VALUES
-(1, 'test', 'test@test.com.mx', 'Acámbaro', 'test', '', NULL),
-(2, 'test', 'test@test.com.mx', 'test', 'test', 'test', NULL),
-(3, 'test2', 'test@test.com.mx', 'test2', 'test2', 'test2', NULL),
-(4, 'test', 'test@test.com.mx', 'tr', 'tr', 'asdf', NULL),
-(5, 'test3', 'test@test.com.mx', 'Acámbaro', 'test', 'test', NULL),
-(6, 'test4', 'test@test.com.mx', 'Acámbaro', 'test', 'test', NULL),
-(7, 'test5', 'test@test.com.mx', 'Acámbaro', 'test2', 'asfd', NULL),
-(8, 'test5', 'test@test.com.mx', 'Acámbaro', 'test2', 'asfd', NULL),
-(9, 'test', 'admin@miacambaro.mx', 'Acámbaro', 'test', 'zada', NULL),
-(10, 'test', 'admin@miacambaro.mx', 'Acámbaro', 'test', 'zada', NULL),
-(11, 'test', 'test@test.com.mx', 'Acámbaro', 'test', 'asdf', NULL),
-(12, 'prueba', 'test@test.com.mx', 'test', 'test', 'test', NULL),
-(13, 'test9', 'admin@miacambaro.mx', 'Acámbaro', 'test', 'fh', NULL),
-(14, '', '', '', '', '', NULL);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `promociones`
 --
 
@@ -145,15 +84,6 @@ CREATE TABLE `promociones` (
   `hotel` varchar(50) DEFAULT NULL,
   `precio` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `promociones`
---
-
-INSERT INTO `promociones` (`idPromocion`, `titulo`, `url_imagen1`, `descripcion`, `fecha_publicacion`, `visible`, `servicio`, `hotel`, `precio`) VALUES
-(8, 'uno', 'uploads/images/20210601042027_promocion.jpg', '', '2021-06-01', 1, NULL, NULL, NULL),
-(9, 'dos', 'uploads/images/20210601042044_promocion.jpg', '', '2021-06-01', 1, NULL, NULL, NULL),
-(10, 'tres', 'uploads/images/20210601042101_promocion.jpg', '', '2021-06-01', 1, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -239,18 +169,6 @@ ALTER TABLE `agencias`
   ADD PRIMARY KEY (`idAgencia`);
 
 --
--- Indices de la tabla `destinos`
---
-ALTER TABLE `destinos`
-  ADD PRIMARY KEY (`idPromocion`);
-
---
--- Indices de la tabla `franquicias`
---
-ALTER TABLE `franquicias`
-  ADD PRIMARY KEY (`idFranquicia`);
-
---
 -- Indices de la tabla `promociones`
 --
 ALTER TABLE `promociones`
@@ -287,22 +205,10 @@ ALTER TABLE `agencias`
   MODIFY `idAgencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT de la tabla `destinos`
---
-ALTER TABLE `destinos`
-  MODIFY `idPromocion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de la tabla `franquicias`
---
-ALTER TABLE `franquicias`
-  MODIFY `idFranquicia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
 -- AUTO_INCREMENT de la tabla `promociones`
 --
 ALTER TABLE `promociones`
-  MODIFY `idPromocion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idPromocion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -314,7 +220,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `idSlider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idSlider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

@@ -1,7 +1,7 @@
 <?php
 include_once ('../../assets/template/header.php');
-require_once ('../../class/Agencia.php');
-$agencia = Agencia::recuperarTodos();
+require_once ('../../class/Franquicia.php');
+$agencia = Franquicia::recuperarTodos();
 ?>
 <!-- Main content -->
     <div class="content" id="content">
