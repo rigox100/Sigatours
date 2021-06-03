@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         //header('Location: index.php?status_code=1');
         echo '<script>
-            alert("Se Guardó Correctamente");
+        swal("Perfecto!", "Has eliminado correctamente!", "success");
             
             window.location.href="index.php";
             </script>';
@@ -118,14 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li class="active"><a href="./index.php">Inicio</a></li>
                 <li><a href="#franquicias">Franquicias</a></li>
                 <li><a href="#destinos">Destinos</a></li>
-                <!-- <li><a href="#d" data-toggle="modal" data-target="#exampleModal">Registrate</a></li>
-                <li><a href="#d">Internacional</a>
-                    <ul class="dropdown">
-                        <li><a href="#d">Circuitos</a></li>
-                    </ul>
-                </li> -->
-                <!-- <li><a href="./blog.html">Servicios</a></li> -->
-                <!-- <li><a href="./contact.html">Contact</a></li> -->
+      
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -136,8 +129,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <a href="#"><i class="fa fa-instagram"></i></a>
         </div>
         <ul class="top-widget">
-            <li><i class="fa fa-phone"></i> (52) 443-688-9901</li>
-            <li><i class="fa fa-envelope"></i> agencias@sigatours.com.mx</li>
+            <li><i class="fa fa-phone"></i> (52) 417-172-4441</li> 
+            <li><i class="fa fa-envelope"></i> agencias@sigatours.com</li>
         </ul>
     </div>
     <!-- Offcanvas Menu Section End -->
@@ -149,8 +142,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="row">
                     <div class="col-lg-6">
                         <ul class="tn-left">
-                            <li><i class="fa fa-phone"></i> (52) 443-688-9901 </li>
-                            <li><i class="fa fa-envelope"></i> agencias@sigatours.com.mx</li>
+                            <li><i class="fa fa-phone"></i> (52) 417-172-4441 </li>
+                            <li><i class="fa fa-envelope"></i> agencias@sigatours.com</li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
@@ -161,17 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <!-- <a href="#" class="bk-btn">Booking Now</a>
-                            <div class="language-option">
-                                <img src="img/flag.jpg" alt="">
-                                <span>EN <i class="fa fa-angle-down"></i></span>
-                                <div class="flag-dropdown">
-                                    <ul>
-                                        <li><a href="#">Zi</a></li>
-                                        <li><a href="#">Fr</a></li>
-                                    </ul>
-                                </div>
-                            </div> -->
+              
                         </div>
                     </div>
                 </div>
@@ -191,17 +174,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class="active"><a href="./index.php">Inicio</a></li>
+                               
+
+                                    <li class="active"> <a href="./index.php">Inicio</a></li>
                                     <li><a href="#franquicias">Franquicias</a></li>
                                     <li><a href="#destinos">Destinos</a></li>
-                                    <!-- <li><a href="#exampleModal" data-toggle="modal" data-target="#exampleModal">Registrate</a></li>
-                                    <li><a href="#s">Internacional</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#s">Circuitos</a></li>
-                                        </ul>
-                                    </li> -->
-                                    <!-- <li><a href="./blog.html">News</a></li>
-                                    <li><a href="./contact.html">Contact</a></li> -->
+        
                                 </ul>
                             </nav>
                             <div class="nav-right sear">
@@ -565,8 +543,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 443-688-9901 </li>
                                 <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-688-2572 </li>
                                 <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-688-3468 </li>
-                                <li><i class="fa fa-envelope icolor"></i>&nbsp; agencias@sigatours.com.mx</li>
-                                <li><i class="fa fa-address-book-o icolor"></i>&nbsp; Calle Brasilia # 135, Col. Lomas de las Américas. <br> C.P. 58254. Morelia, Mich.</li>
+                                <li><i class="fa fa-envelope icolor"></i>&nbsp; agencias@sigatours.com</li>
+                                <li><i class="fa fa-address-book-o icolor"></i>&nbsp;  Calle Sinaloa 16 Colonia San Isidro II<br> C.P. 38670. Acámbaro, Gto.</li>
 
 
                             </ul>
@@ -591,7 +569,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="col-lg-7">
                         <ul>
                             <!-- <li><a href="#">Terms of use</a></li> -->
-                            <li><a href="#">Aviso de privacidad</a></li>
+                            <li><a href="aviso_privacidad.php" target="_blank">Aviso de privacidad</a></li>
                             <!-- <li><a href="#">Environmental Policy</a></li> -->
                         </ul>
                     </div>
