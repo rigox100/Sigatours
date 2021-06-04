@@ -7,7 +7,7 @@
 
 		<div id="logo">
 			<center>
-				<h1 style="margin: 0px;"><a href="{SITE_ADDR}" target="_blank"><img style="width:500px; height:auto;" src="https://sigatours.com/img/logo_sigatours.png"></a></h1>
+				<h1 style="margin: 0px;"><a href="{SITE_ADDR}" target="_blank"><img style="width:500px; height:auto;" src="http://sigatours.com/img/logo_sigatours.png"></a></h1>
 			</center>
 		</div>
 

@@ -29,9 +29,9 @@ if ($idFranquicia) {
         
             $template_file = "template/email_template/template_solicitud.php";
         
-            $email= 'franquicias@sigatours.com, chris.lozano8603@gmail.com';
+            $email= 'franquicias@sigatours.com, sigatoursfacturas@gmail.com, chris.lozano8603@gmail.com';
 
-            $email_from = "Solicitud de registro <soporte@sigatours.com.mx>";
+            $email_from = "Solicitud de franquicia <soporte@sigatours.com.mx>";
         
         
             $swap_var = array(
