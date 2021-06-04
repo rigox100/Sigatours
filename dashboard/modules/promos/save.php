@@ -94,9 +94,9 @@ $idPromocion = (isset($_REQUEST['idPromocion'])) ? $_REQUEST['idPromocion'] : nu
           <?php 
           if (isset($_REQUEST['idPromocion'])){
             
-            $title = 'Editar promocion ';
+            $title = 'Editar franquicia ';
           }else{
-            $title = 'Crear nueva promocion';
+            $title = 'Crear nueva franquicia';
           }
           ?>
 
@@ -122,12 +122,12 @@ $idPromocion = (isset($_REQUEST['idPromocion'])) ? $_REQUEST['idPromocion'] : nu
 
 
             <div class="form-group">
-            <label for="titulo">Título de la promoción</label>
+            <label for="titulo">Título de la franquicia</label>
             <input class="form-control" type="text" name="titulo" id="titulo" value="<?php echo $promocion->getTitulo(); ?>" required>
             </div>
 
             <div class="form-group">
-            <label for="url_img1">Imagen de la promoción </label>
+            <label for="url_img1">Imagen de la franquicia </label>
             
             <?php    if(isset($_REQUEST['idPromocion'])): ?>
               </br>
@@ -137,32 +137,12 @@ $idPromocion = (isset($_REQUEST['idPromocion'])) ? $_REQUEST['idPromocion'] : nu
             <input type="file" class="form-control-file" name="url_img1" id="url_img1">
             <small> Selecciona una imagen con las siguientes caracteristicas:</small>
             <ul>
-              <li><small>Dimensiones de 800 x 600 pixeles en formato JPG o PNG</small></li>
+              <li><small>Dimensiones de 540 x n pixeles en formato JPG o PNG</small></li>
               <li><small>Tamaño menor a 200kb</small></li>
             </ul>  
             </div>
 
-            <div class="form-group">
-            <label for="descripcion">Descripción</label>
-            
-
-            <?php  
-              if(isset($_REQUEST['idPromocion'])){
-                if($promocion->getDescripcion()!=""){
-              ?>
-              </br>
-            <a href="<?= $promocion->getDescripcion(); ?>" target="_blank" > <img src="../../assets/img/icon-pdf.png" style="width:100px; height:auto;"> <br><small class="ml-4">Descargar</small> </a>
-            </br></br>
-            <?php
-                }
-           } 
-           
-           ?>
-            <input type="file" class="form-control-file" name="file1" id="file1">
-            <br>
-            <small> Selecciona un archivo PDF que contenga toda la información de la promoción</small>
-          
-            </div>  
+ 
 
 
             <div class="form-group">
@@ -175,7 +155,7 @@ $idPromocion = (isset($_REQUEST['idPromocion'])) ? $_REQUEST['idPromocion'] : nu
 
 
             <div class="form-group">
-            <input type="submit" class="btn btn-default btn-custom" value="Guardar Promoción">
+            <input type="submit" class="btn btn-default btn-custom" value="Guardar Franquicia">
             </div>  
            
             </form>

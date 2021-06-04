@@ -94,9 +94,9 @@ $idPromocion = (isset($_REQUEST['idPromocion'])) ? $_REQUEST['idPromocion'] : nu
           <?php 
           if (isset($_REQUEST['idPromocion'])){
             
-            $title = 'Editar promocion ';
+            $title = 'Editar destino ';
           }else{
-            $title = 'Crear nueva promocion';
+            $title = 'Crear nuevo destino';
           }
           ?>
 
