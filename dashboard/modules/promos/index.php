@@ -9,9 +9,9 @@ $promociones = Promocion::recuperarTodos();
       <div class="container-fluid">
         <div class="row">
           <div class="col">
-            <h3 class="text-center"> Administrar Promociones </h3>
+            <h3 class="text-center"> Administrar Franquicias </h3>
             
-              <a href="save.php" class="btn btn-default btn-custom" > <i class="fas fa-plus"></i> Agregar nueva promoción</a><br><br>
+              <a href="save.php" class="btn btn-default btn-custom" > <i class="fas fa-plus"></i> Agregar nueva franquicia</a><br><br>
 
               <br>
 
@@ -23,8 +23,8 @@ $promociones = Promocion::recuperarTodos();
   <thead class="thead-dark">
     <tr class="text-center">
     
-    <th scope="col">Imagen de la promoción</th>
-      <th scope="col">Título de la promoción</th>
+    <th scope="col">Imagen de la franquicia</th>
+      <th scope="col">Título de la franquicia</th>
       <th scope="col">Fecha de Publicación</th>
       <th scope="col">Visible</th>
       <th scope="col">Editar</th>
@@ -75,7 +75,7 @@ $promociones = Promocion::recuperarTodos();
       <td><?php $date= date_create($item['fecha_publicacion']); echo date_format($date,"d-m-Y"); ?></td>
       <td class="text-center"><?php if($item['visible']==1){ echo '<a href="#" class="btn btn-success fas fa-check-circle lock" alt="Visible"></a>'; }else{ echo '<a href="#" class="btn btn-warning fas fa-pause-circle lock" alt="No Visible"></a>'; } ?></td>
       <td class="text-center"><a href="save.php?idPromocion=<?php echo $item[0];?>" class="btn btn-warning far fa-edit"></a></td>
-      <td class="text-center"><a href="delete.php?idPromocion=<?php echo $item[0];?>" onclick="return confirm('¿Está seguro que desea eliminar esta promoción?')" class="btn btn-danger far fa-trash-alt"></a></td> 
+      <td class="text-center"><a href="delete.php?idPromocion=<?php echo $item[0];?>" onclick="return confirm('¿Está seguro que desea eliminar esta franquicia?')" class="btn btn-danger far fa-trash-alt"></a></td> 
     </tr>
     <?php endforeach; ?>
   </tbody>
