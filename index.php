@@ -1,46 +1,8 @@
 <?php
-require_once './dashboard/class/Franquicia.php';
-
-$idFranquicia = (isset($_REQUEST['idFranquicia'])) ? $_REQUEST['idFranquicia'] : null;
-
-if ($idFranquicia) {
-    $franquicia = Franquicia::buscarPorId($idFranquicia);
-} else {
-    $franquicia = new Franquicia();
-}
-
-//Request
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    $franquicia->setNombreCompleto($_POST['nombre_completo']);
-    $franquicia->setEmail($_POST['email']);
-    $franquicia->setCiudad($_POST['ciudad']);
-    $franquicia->setTelefono($_POST['telefono']);
-    $franquicia->setComentarios($_POST['comentarios']);
-    $franquicia->setFechaCreacion(date('Y-m-d'));
-
-    $franquicia->guardar();
-
-    if ($idFranquicia != "") {
-        echo '<script>
-        alert("Ha surgido un error");
-        
-        window.location.href="index.php";
-        </script>';
-    } else {
-
-        //header('Location: index.php?status_code=1');
-        echo '<script>
-        swal("Perfecto!", "Has eliminado correctamente!", "success");
-            
-            window.location.href="index.php";
-            </script>';
-    }
-}
-
+include_once('lib/enviar_solicitud.php');
 ?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
