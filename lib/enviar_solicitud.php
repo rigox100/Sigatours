@@ -1,5 +1,5 @@
 <?php
-require_once 'dashboard/class/Agencia.php';
+require_once 'dashboard/class/Franquicia.php';
 
 
 $idFranquicia = (isset($_REQUEST['idFranquicia'])) ? $_REQUEST['idFranquicia'] : null;

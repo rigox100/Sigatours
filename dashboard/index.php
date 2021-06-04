@@ -133,7 +133,7 @@ if($_SESSION['idRol']== null){
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../franchises/index.php" class="nav-link">
+                <a href="modules/franchises/index.php" class="nav-link">
                   <i class="fas fa-hotel"></i>
                   <p>Solicitudes de franquicias</p>
                 </a>
