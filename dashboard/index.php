@@ -121,12 +121,6 @@ if($_SESSION['idRol']== null){
               </li>
               <?php } ?>
               <li class="nav-item">
-                <a href="modules/travel_agencies/index.php" class="nav-link">
-                  <i class="fa fa-hotel"></i>
-                  <p>Solicitudes de Franquicias</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="modules/slider/index.php" class="nav-link">
                   <i class="far fa-image"></i>
                   <p>Slider Principal</p>
@@ -136,6 +130,12 @@ if($_SESSION['idRol']== null){
                 <a href="modules/promos/index.php" class="nav-link">
                   <i class="fas fa-tags"></i>
                   <p>Franquicias</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../franchises/index.php" class="nav-link">
+                  <i class="fas fa-hotel"></i>
+                  <p>Solicitudes de franquicias</p>
                 </a>
               </li>
               <li class="nav-item">

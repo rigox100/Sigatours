@@ -101,14 +101,15 @@ class Franquicia {
 
         }else{           
             $consulta = $conexion->prepare(
-                'INSERT INTO ' . self::TABLA . ' (nombre_completo, email, ciudad, telefono, comentarios) 
-                 VALUES (:nombre_completo, :email, :ciudad, :telefono, :comentarios)');      
+                'INSERT INTO ' . self::TABLA . ' (nombre_completo, email, ciudad, telefono, comentarios, fecha_creacion) 
+                 VALUES (:nombre_completo, :email, :ciudad, :telefono, :comentarios, :fecha_creacion)');      
             
             $consulta->bindParam(':nombre_completo', $this->nombre_completo);
             $consulta->bindParam(':email', $this->email);
             $consulta->bindParam(':ciudad', $this->ciudad); 
             $consulta->bindParam(':telefono', $this->telefono);             
-            $consulta->bindParam(':comentarios', $this->comentarios);   
+            $consulta->bindParam(':comentarios', $this->comentarios); 
+            $consulta->bindParam(':fecha_creacion', $this->fecha_creacion);     
            
             //var_dump($consulta);
             if($consulta->execute()){
@@ -130,7 +131,7 @@ class Franquicia {
         
         $conexion = new Conexion();
         $consulta = $conexion->prepare('DELETE FROM ' . self::TABLA . ' WHERE idFranquicia = :idFranquicia');
-        $consulta->bindParam(':idAgencia', $this->idFranquicia);
+        $consulta->bindParam(':idFranquicia', $this->idFranquicia);
         $consulta->execute();
         $conexion = null;
     }
@@ -146,7 +147,7 @@ class Franquicia {
         if ($registro) {
            
             return new self($registro['nombre_completo'], $registro['email'], $registro['ciudad'], 
-             $registro['telefono'], $registro['comentarios'], $idFranquicia);
+             $registro['telefono'], $registro['comentarios'], $registro['fecha_creacion'], $idFranquicia);
         } else {
 
             return false;
