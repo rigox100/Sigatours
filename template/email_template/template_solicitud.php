@@ -21,7 +21,7 @@
 
 			
 
-			<p>Usted ha recibido una solicitud de registro de <strong>{EMAIL_TITLE}</strong>, con el correo electrónico <strong>{EMAIL}</strong>,  para ver los detalles de esta solicitud por favor ingrese al <a href="https://sigatours.com/cpanel">CPANEL</a></p>
+			<p>Usted ha recibido una solicitud de registro de <strong>{EMAIL_TITLE}</strong>, con el correo electrónico <strong>{EMAIL}</strong>,  para ver los detalles de esta solicitud por favor ingrese al <a href="http://sigatours.com/cpanel">CPANEL</a></p>
 
 
 			

@@ -21,7 +21,7 @@
 
 			
 
-			<p>Gracias por registrarse en <a href="https://htop.com.mx/">Holiday Travel Operadora Mayorista</a>, uno de nuestros ejecutivos se pondr&aacute; en contacto con usted a la brevedad posible.</p>
+			<p>Su solicitud de franquicia ha sido enviada exitosamente a <a href="http://sigatours.com/">Sigatours</a>, uno de nuestros ejecutivos se pondr&aacute; en contacto con usted a la brevedad posible.</p>
 			
 			
 
