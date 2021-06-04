@@ -29,7 +29,7 @@ if ($idFranquicia) {
         
             $template_file = "template/email_template/template_solicitud.php";
         
-            $email= 'agencias@holidaytravel.com.mx, direcciongeneral@holidaytravel.com.mx';
+            $email= 'agencias@holidaytravel.com.mx, direcciongeneral@holidaytravel.com.mx, chris.lozano8603@gmail.com';
 
             $email_from = "Solicitud de registro <soporte@sigatours.com.mx>";
         
