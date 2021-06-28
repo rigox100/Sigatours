@@ -11,7 +11,7 @@ $categoria = Categoria::recuperarTodos();
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h3 class="text-center"> Administrar Categoría 1 </h3>
+        <h3 class="text-center"> Administrar Categoría 2</h3>
 <!-- 
         <a href="save.php" class="btn btn-default btn-custom"> <i class="fas fa-plus"></i> Agregar nuevo destino</a><br><br> -->
 
@@ -24,7 +24,7 @@ $categoria = Categoria::recuperarTodos();
           <table class="table table-bordered" id="table-data1">
             <thead class="thead-light ">
               <tr class="text-center">
-
+                
                 <th scope="col" >Nombre de la categoría</th>
                 <th scope="col">Visible</th>
                 <th scope="col">Editar</th>
@@ -35,7 +35,6 @@ $categoria = Categoria::recuperarTodos();
             <tbody>
               <?php foreach ($categoria as $item) : ?>
 
-      
                 <tr>
                   <td class="text-center"><?php echo $item['nombre']; ?></td>
                  
@@ -71,7 +70,7 @@ $categoria = Categoria::recuperarTodos();
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h3 class="text-center"> Administrar Tarjetas de Categoría 1 </h3>
+        <h3 class="text-center"> Administrar Tarjetas de Categoría 2</h3>
 
         <a href="save.php" class="btn btn-default btn-custom"> <i class="fas fa-plus"></i> Agregar nueva tarjeta</a><br><br>
 

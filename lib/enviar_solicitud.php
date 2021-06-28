@@ -72,7 +72,7 @@ if ($idFranquicia) {
           }else{
           
 
-            header('Location: index.php');
+            header('Location: franquicias.php');
           }
           
         }

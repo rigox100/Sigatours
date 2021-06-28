@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,7 +7,7 @@
     <meta name="keywords" content="sigatours, travel, viajar, viajes, agencias">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>::aviso_privacidad::</title>
+    <title>::Aviso_privacidad::</title>
     <!--Icon-->
     <link rel="shortcut icon" href="img/favicon.ico">
 
@@ -58,9 +57,9 @@
         </div>
         <nav class="mainmenu mobile-menu">
             <ul>
-                <li class="active"><a href="./index.php">Inicio</a></li>
-                <li><a href="./index.php#franquicias">Franquicias</a></li>
-                <li><a href="./index.php#destinos">Destinos</a></li>
+                <li ><a href="./index.php"><i class="fa fa-home partext2"></i>&nbsp;Inicio</a></li>
+                <li><a href="./franquicias.php"><i class="fa fa-building-o partext2"></i>&nbsp;Franquicias</a></li>
+                <li><a href="./index.php#destinos"><i class="fa fa-plane partext2"></i>&nbsp;Destinos</a></li>
 
             </ul>
         </nav>
@@ -73,7 +72,7 @@
         </div>
         <ul class="top-widget">
             <li><i class="fa fa-phone"></i> (52) 417-172-4441</li>
-            <li><i class="fa fa-envelope"></i> agencias@sigatours.com</li>
+            <li><i class="fa fa-envelope"></i> reservaciones@sigatours.com</li>
         </ul>
     </div>
     <!-- Offcanvas Menu Section End -->
@@ -86,7 +85,7 @@
                     <div class="col-lg-6">
                         <ul class="tn-left">
                             <li><i class="fa fa-phone"></i> (52) 417-172-4441</li>
-                            <li><i class="fa fa-envelope"></i> agencias@sigatours.com</li>
+                            <li><i class="fa fa-envelope"></i> reservaciones@sigatours.com</li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
@@ -97,7 +96,7 @@
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-             
+
                         </div>
                     </div>
                 </div>
@@ -117,10 +116,10 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class="active"><a href="./index.php">Inicio</a></li>
-                                    <li><a href="./index.php#franquicias">Franquicias</a></li>
-                                    <li><a href="./index.php#destinos">Destinos</a></li>
-                                 
+                                    <li ><a href="./index.php"><i class="fa fa-home partext2"></i>&nbsp;Inicio</a></li>
+                                    <li><a href="./franquicias.php"><i class="fa fa-building-o partext2"></i>&nbsp;Franquicias</a></li>
+                                    <li><a href="./index.php#destinos"><i class="fa fa-plane partext2"></i>&nbsp;Destinos</a></li>
+
                                 </ul>
                             </nav>
                             <div class="nav-right">
@@ -154,11 +153,11 @@
                 <div class="col-lg-12 col-sm-12">
                     <div class="service-item">
                         <p class="text-justify">De conformidad con lo establecido en la Ley Federal de protección de datos personales en posesión de los particulares,
-                            <b>SIGA TOURS  S.A DE C.V. </b> pone a su disposición el siguiente aviso de privacidad. <br><br>
-                            <b> SIGA TOURS  S.A DE C.V. </b>, es responsable del uso y protección de sus datos personales, en este sentido y atendiendo las obligaciones
+                            <b>SIGA TOURS S.A DE C.V. </b> pone a su disposición el siguiente aviso de privacidad. <br><br>
+                            <b> SIGA TOURS S.A DE C.V. </b>, es responsable del uso y protección de sus datos personales, en este sentido y atendiendo las obligaciones
                             legales establecidas en la Ley Federal de protección de datos personales en posesión de los particulares, a través de este instrumento se informa a los titulares
                             de los datos, la información que de ellos se recaba y los fines que se darán a dicha información <br><br>
-                            Además de lo anterior, informamos a usted que <b> SIGA TOURS  S.A DE C.V. </b> tiene su domicilio ubicado en:
+                            Además de lo anterior, informamos a usted que <b> SIGA TOURS S.A DE C.V. </b> tiene su domicilio ubicado en:
                         </p>
                         <p class="text-center"><i>CALLE SINALOA 16 , COLONIA SAN ISIDRO II , ACAMBARO, GTO. C.P. 38670</i></p>
                         <p class="text-justify">Los datos personales que recabamos de usted serán utilizados para las siguientes finalidades,
@@ -179,13 +178,13 @@
 
                             Para el ejercicio de cualquiera de los derechos ARCO se deberá presentar la solicitud respectiva por escrito, mediante el envío de una carta o solicitud en formato libre a la siguiente dirección:
                         </p>
-                        <p class="text-center"><i>CALLE SINALOA 16, COLONIA SAN ISIDRO II, ACÁMBARO, GTO. C.P.  38600</i></p>
+                        <p class="text-center"><i>CALLE SINALOA 16, COLONIA SAN ISIDRO II, ACÁMBARO, GTO. C.P. 38600</i></p>
 
                         <p class="text-justify">Lo anterior también servirá para conocer el procedimiento y requisitos para el ejercicio de los derechos, ARCO, no obstante, debe contener la siguiente información:
                             <br><br>Nombre <br>Dirección <br>e-mail <br>Teléfono <br>Motivo <br> <br>En todo caso la respuesta a la solicitud se darán el siguiente plazo: 15 días hábiles de haberse recibido y deberá ser enviada por correo certificado.
                             Los datos de contacto de la persona o departamento de datos personales, que está a cargo de dar trámite a la solicitud derechos ARCO, son los siguientes: <br><br>
                             a) Nombre del responsable departamento de quejas y administrativo <br>
-                            b) Domicilio: Calle Sinaloa 16 Colonia San Isidro II, Acámbaro, Gto. C.P. 38670  <br>
+                            b) Domicilio: Calle Sinaloa 16 Colonia San Isidro II, Acámbaro, Gto. C.P. 38670 <br>
                             c) Teléfono: 417 1724441 <br>
                             d) Correo electrónico: direccióngeneral@sigatours.com.mx
 
@@ -241,17 +240,17 @@
                         <div class="ft-contact">
                             <h6>Contáctanos</h6>
                             <ul>
-                                <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 443-688-9901 </li>
-                                <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-688-2572 </li>
-                                <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-688-3468 </li>
-                                <li><i class="fa fa-envelope icolor"></i>&nbsp; agencias@sigatours.com</li>
-                                <li><i class="fa fa-address-book-o icolor"></i>&nbsp;  Calle Sinaloa 16 Colonia San Isidro II<br> C.P. 38670. Acámbaro, Gto.</li>
+                                <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-172-4441 </li>
+                                <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-172-6927 </li>
+
+                                <li><i class="fa fa-envelope icolor"></i>&nbsp; reservaciones@sigatours.com</li>
+                                <li><i class="fa fa-address-book-o icolor"></i>&nbsp; Calle Sinaloa # 16 Colonia San Isidro II<br> C.P. 38670. Acámbaro, Gto.</li>
 
 
                             </ul>
                         </div>
                     </div>
-           
+
                 </div>
             </div>
         </div>
@@ -272,7 +271,7 @@
                                 Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> Todos los derechos reservados | Sigatours Corporativo Turístico
+                                </script> Derechos reservados | Corporativo Sigatours
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>

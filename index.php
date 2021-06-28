@@ -1,6 +1,3 @@
-<?php
-include_once('lib/enviar_solicitud.php');
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -28,11 +25,12 @@ include_once('lib/enviar_solicitud.php');
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="./dashboard/assets/plugins/sweetAlert2/sweetalert2.min.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
 
     <link rel="stylesheet" href="./dashboard/assets/css/style.css" type="text/css">
     <!-- <link rel="stylesheet" href="./dashboard/assets/css/adminlte.css" type="text/css"> -->
@@ -77,10 +75,10 @@ include_once('lib/enviar_solicitud.php');
         </div>
         <nav class="mainmenu mobile-menu">
             <ul>
-                <li class="active"><a href="./index.php">Inicio</a></li>
-                <li><a href="#franquicias">Franquicias</a></li>
-                <li><a href="#destinos">Destinos</a></li>
-      
+                <li class="active"> <a href="./index.php"><i class="fa fa-home partext2"></i>&nbsp;Inicio</a></li>
+                <li><a href="./franquicias.php"><i class="fa fa-building-o partext2"></i>&nbsp;Franquicias</a></li>
+                <li><a href="#destinos"><i class="fa fa-plane partext2"></i>&nbsp;Destinos</a></li>
+
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -91,8 +89,8 @@ include_once('lib/enviar_solicitud.php');
             <a href="#"><i class="fa fa-instagram"></i></a>
         </div>
         <ul class="top-widget">
-            <li><i class="fa fa-phone"></i> (52) 417-172-4441</li> 
-            <li><i class="fa fa-envelope"></i> agencias@sigatours.com</li>
+            <li><i class="fa fa-phone partext2"></i> (52) 417-172-4441</li>
+            <li><i class="fa fa-envelope partext2"></i> reservaciones@sigatours.com</li>
         </ul>
     </div>
     <!-- Offcanvas Menu Section End -->
@@ -104,8 +102,8 @@ include_once('lib/enviar_solicitud.php');
                 <div class="row">
                     <div class="col-lg-6">
                         <ul class="tn-left">
-                            <li><i class="fa fa-phone"></i> (52) 417-172-4441 </li>
-                            <li><i class="fa fa-envelope"></i> agencias@sigatours.com</li>
+                            <li><i class="fa fa-phone "></i> (52) 417-172-4441 </li>
+                            <li><i class="fa fa-envelope"></i> reservaciones@sigatours.com</li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
@@ -116,7 +114,7 @@ include_once('lib/enviar_solicitud.php');
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-              
+
                         </div>
                     </div>
                 </div>
@@ -136,12 +134,12 @@ include_once('lib/enviar_solicitud.php');
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                               
 
-                                    <li class="active"> <a href="./index.php">Inicio</a></li>
-                                    <li><a href="#franquicias">Franquicias</a></li>
-                                    <li><a href="#destinos">Destinos</a></li>
-        
+
+                                    <li class="active"> <a href="./index.php"><i class="fa fa-home partext2"></i>&nbsp;Inicio</a></li>
+                                    <li><a href="./franquicias.php"><i class="fa fa-building-o partext2"></i>&nbsp;Franquicias</a></li>
+                                    <li><a href="#destinos"><i class="fa fa-plane partext2"></i>&nbsp;Destinos</a></li>
+
                                 </ul>
                             </nav>
                             <div class="nav-right sear">
@@ -241,239 +239,122 @@ include_once('lib/enviar_solicitud.php');
 
         </div>
     </section>
+
     <!-- Hero Section End -->
 
-    <!-- Services Section End -->
-    <section class="services-section spad" id="franquicias">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>FRANQUICIAS</span>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="section-title">
-                        <h3 class="negrita">Ventajas de tener una Franquicia Sigatours</h3>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                    <div class="section-title">
-                        <p class="text-justify partext ml-4"> <strong> EN LA INDRUSTRIA DEL TURISMO</strong></p>
-                        <ul class="text-justify quitpoint">
-
-                            <li> <i class="far fa-check-circle partext2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-                            <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-                            <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-                            <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-12 ">
-                    <div class="section-title">
-                        <p class="text-justify partext ml-5"> <strong> EN OTROS GIROS</strong></p>
-                        <ul class="text-justify quitpoint">
-
-                        <li> <i class="far fa-check-circle partext2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                    <div class="section-title">
-                        <p class="text-justify partext ml-4"> <strong> VENTAJAS DE SIGATOURS</strong></p>
-                        <ul class="text-justify quitpoint">
-                        <li> <i class="far fa-check-circle partext2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-                        <li> <i class="far fa-check-circle partext2 mt-2"></i>&nbsp;&nbsp; Lorem ipsum dolor sit amet consectetur. </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="testimonial-section spad" id="promociones">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-
-                        <h3 class="negrita">Opciones de Franquicia</h3>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-
-
-                <?php
-                include_once './dashboard/class/Promocion.php';
-                $promo = Promocion::recuperarTodos();
-
-                if (count($promo) > 0) :
-                ?>
-                    <?php foreach ($promo as $item) : ?>
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-12">
-                            <div class="card" style="width: 18rem;">
-                               
-                                <div class="card-body">
-
-                                <a href="#formulario"><img class="img-fluid" src="./dashboard/modules/promos/<?php echo $item['url_imagen1']; ?>"></a>
-                                    
-                           
-
-                                </div>
-                            </div>
-
-                        </div>
-                    <?php endforeach; ?>
-                <?php else : ?>
-                    <div class="">
-                        <p class="alert alert-info justify-content-center"> No hay franquicias para mostrar </p>
-                    </div>
-                <?php endif; ?>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Formulario -->
-    <section class="services-section spad" id="franquicias">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="section-title">
-                        <h3 class="negrita" id="formulario">Forma parte de nuestra red de Franquicias</h3>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-8 ">
-                    <form action="index.php" method="post"   id="formu">
-                    <div class="form-group" >
-                            <label for="nombre_completo" class="partext negrita">Nombre Completo:</label>
-                            <input type="text" class="form-control" name="nombre_completo" id="nombre_completo" placeholder="Tu Nombre Completo" required>
-                        </div>
-                      
-                            <div class="form-group">
-                                <label for="email"  class="partext negrita">Email:</label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Tu Email" required>
-                            </div>
-        
-                
-                        <div class="form-group">
-                            <label for="ciudad"  class="partext negrita">Ciudad:</label>
-                            <input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Ciudad" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="telefono"  class="partext negrita">Teléfono:</label>
-                            <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Teléfono (con lada)" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="comentarios"  class="partext negrita">Comentarios:</label>
-                            <textarea class="form-control" rows="10" name="comentarios" id="comentarios" placeholder="Comentarios" required></textarea>
-                        </div>
-                
-                    
-                        <button type="submit" class="btn btn-danger">ENVIAR SOLICITUD</button>
-                    </form>
-                </div>
-
-            </div>
-            
-        </div>
-    </section>
 
 
     <!-- Testimonial Section Begin -->
     <section class="testimonial-section spad" id="destinos">
+
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
+                        <?php
+                        include_once './dashboard/class/Categoria.php';
+                        $cate = Categoria::recuperarCategoriasPublicadas();
 
-                        <h3 class="negrita">Destinos más populares</h3>
+                        if (count($cate) > 0) :
+                        ?>
+                        <?php foreach ($cate as $item) : ?>
+                            <h3 class="negrita"><?php echo $item['nombre']; ?></h3>
+                        <?php endforeach; ?>
                     </div>
                 </div>
+            <?php endif; ?>
             </div>
-            <div class="row">
 
 
-                <?php
-                include_once './dashboard/class/Destinos.php';
-                $promo = Destinos::recuperarTodos();
 
-                if (count($promo) > 0) :
-                ?>
-                    <?php foreach ($promo as $item) : ?>
-                        <div class="col-md-4">
-                            <div class="hovereffects">
-                                <img src="./dashboard/modules/destinos/<?php echo $item['url_imagen1']; ?>" class="img-fluid" height="300px" width="100%" alt="images">
-                                <div class="overlay">
-                                    <!-- <h2>Awesome Temples</h2> -->
-                                    <a class="info" href="#" data-toggle="modal" data-target="#myModal1">Más Información...</a>
-                                </div>
-                            </div>
 
-                            <div class="modal fade" id="myModal1" role="dialog">
-                                <div class="modal-dialog ">
-                                    <!-- Modal content-->
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <div class="">
-                                                <img src="img/logo.png" alt="" height="34px">
-                                            </div>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <img src="./dashboard/modules/destinos/<?php echo $item['url_imagen1']; ?>" class="img-fluid" width="100%" height="100%">
-                                            <hr>
-                                            <a class="btn btn-warning boto btn-lg btn-block mt-2" href="./dashboard/modules/promos/<?php echo $item['descripcion']; ?>" download="Itinerario.pdf" role="button">Descargar Itinerario</a>
+            <?php
+            include_once './dashboard/class/Destinos.php';
+            $promo = Destinos::recuperarPromocionesPublicadas();
 
-                                        </div>
+            if (count($promo) > 0) :
+            ?>
 
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+
+                <div class="carousel">
+                    <div class="carousel__contenedor">
+                        <button aria-label="Anterior" class="carousel__anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+
+
+                        <div class="carousel__lista" id="carousel__lista">
+                            <?php foreach ($promo as $item) : ?>
+                                <div class="carousel__elemento">
+                                    <div class="hovereffects">
+                                        <img src="./dashboard/modules/destinos/<?php echo $item['url_imagen1']; ?>" alt="destinos" class="img-fluid caruima">
+                                        <div class="overlay">
+
+                                            <a class="info" href="#" data-toggle="modal" data-target="#myModal<?php echo $item[0]; ?>">Más Información...</a>
                                         </div>
                                     </div>
 
+
+
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+
+
+                        <button aria-label="Siguiente" class="carousel__siguiente">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div role="tablist" class="carousel__indicadores"></div>
+
+
+
+                <?php endif; ?>
+                </div>
+                <?php foreach ($promo as $item) : ?>
+                    <div class="modal fade carstop" id="myModal<?php echo $item[0]; ?>" tabindex="-1" role="dialog">
+                        <div class="modal-dialog ">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="">
+                                        <img src="img/logo.png" alt="" height="34px">
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./dashboard/modules/destinos/<?php echo $item['url_imagen1']; ?>" class="img-fluid" width="100%" height="100%">
+                                    <hr>
+                                    <a class="btn btn-warning boto btn-lg btn-block mt-2" href="./dashboard/modules/destinos/<?php echo $item['descripcion']; ?>" download="Itinerario.pdf" role="button">Descargar Itinerario</a>
+
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
 
                         </div>
-                    <?php endforeach; ?>
-                <?php else : ?>
-                    <div class="">
-                        <p class="alert alert-info justify-content-center"> No hay destinos para mostrar </p>
                     </div>
-                <?php endif; ?>
+                <?php endforeach; ?>
 
-            </div>
+
+
         </div>
     </section>
+
+
+
+
+
+
+
 
 
     <!-- Footer Section Begin -->
@@ -502,11 +383,10 @@ include_once('lib/enviar_solicitud.php');
                         <div class="ft-contact">
                             <h6>Contáctanos</h6>
                             <ul>
-                                <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 443-688-9901 </li>
-                                <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-688-2572 </li>
-                                <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-688-3468 </li>
-                                <li><i class="fa fa-envelope icolor"></i>&nbsp; agencias@sigatours.com</li>
-                                <li><i class="fa fa-address-book-o icolor"></i>&nbsp;  Calle Sinaloa 16 Colonia San Isidro II<br> C.P. 38670. Acámbaro, Gto.</li>
+                                <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-172-4441 </li>
+                                <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-172-6927 </li>
+                                <li><i class="fa fa-envelope icolor"></i>&nbsp; reservaciones@sigatours.com</li>
+                                <li><i class="fa fa-address-book-o icolor"></i>&nbsp; Calle Sinaloa # 16 Colonia San Isidro II<br> C.P. 38670. Acámbaro, Gto.</li>
 
 
                             </ul>
@@ -542,7 +422,7 @@ include_once('lib/enviar_solicitud.php');
                                 Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> Todos los derechos reservados | Sigatours Corporativo Turístico
+                                </script> Derechos reservados | Corporativo Sigatours
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
@@ -567,6 +447,7 @@ include_once('lib/enviar_solicitud.php');
 
 
     <!-- Js Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
@@ -576,105 +457,9 @@ include_once('lib/enviar_solicitud.php');
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="./dashboard/assets/plugins/sweetAlert2/sweetalert2.all.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.validator.addMethod("formAlphanumeric", function(value, element) {
-                var pattern1 = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
-                return this.optional(element) || pattern1.test(value);
-            }, "El campo debe tener un valor alfanumérico");
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
 
-            $.validator.addMethod("email", function(value, element) {
-                var pattern2 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/;
-                return this.optional(element) || pattern2.test(value);
-            }, "Debe ingresar un email válido");
-
-
-            $("#formu").validate({
-
-                wrapper: 'span',
-                errorPlacement: function(error, element) {
-                    error.css({
-                        'padding-left': '10px',
-                        'margin-right': '20px',
-                        'padding-bottom': '2px',
-                        'color': 'red',
-                        'font-size': 'small'
-                    });
-                    error.addClass("arrow")
-                    error.insertAfter(element);
-                },
-
-
-                rules: {
-                    nombre_completo: {
-                        required: true,
-                        minlength: 4,
-                        maxlength: 100,
-                        formAlphanumeric: true
-                    },
-                    email: {
-                        required: true,
-                        maxlength: 50,
-                        email: true
-                    },
-                    ciudad: {
-                        required: true,
-                        minlength: 4,
-                        maxlength: 30,
-                       
-                    },
-                    telefono: {
-                        required: true,
-                        minlength: 10,
-                        maxlength: 10
-                    },
-                
-                    comentarios: {
-                        required: true,
-                        maxlength: 500
-                    }
-                },
-    
-
-                messages: {
-
-                    nombre_completo: {
-                        required: 'Por favor introduzca su nombre',
-                        formAlphanumeric: "El nombre solo puede contener letras",
-                        minlength: "Debe tener al menos 5 caracteres",
-                        maxlength: "Solo se admite un máximo de 100 caracteres"
-                    },
-                    email: {
-                        required: "Por favor introduzca su email",
-                        maxlength: "Solo se admite un máximo de 50 caracteres",
-                        email: "Debe ingresar un email válido"
-                    },
-                    ciudad: {
-                        required: "Por favor introduzca su ciudad",
-                        minlength: "Debe contener al menos 4 caracteres",
-                        maxlength: "Solo se admite un máximo de 30 caracteres"
-
-                    },
-
-                    telefono: {
-                        required: "Por favor introduzca un teléfono de contacto",
-                        minlength: "Ingrese un teléfono válido de 10 dígitos",
-                        maxlength: "Ingrese un teléfono válido de 10 dígitos"
-
-                    },
-                    comentarios: {
-                        required: "Porfavor introduzca una breve descripción",
-                        maxlength: "Solo se admite un máximo de 500 caracteres"
-                    },
-
-                },
-
-
-
-            });
-
-        });
-    </script>
 
 
 

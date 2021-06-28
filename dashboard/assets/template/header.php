@@ -136,9 +136,21 @@ if($_SESSION['idRol']== null){
               </li>
               <li class="nav-item">
                 <a href="../destinos/index.php" class="nav-link">
-                  <i class="fas fa-tags"></i>
-                  <p>Destinos</p>
+                  <i class="fa fa-folder-open"></i>
+                  <p>Categoría 1</p>
                 </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a href="../category_two/index.php" class="nav-link">
+                  <i class="fa fa-bed"></i>
+                  <p>Categoría 2</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../destinos/index.php" class="nav-link">
+                  <i class="fa fa-plane"></i>
+                  <p>Categoría 3</p>
+                </a> -->
               </li>
             </ul>
           </li>

@@ -35,6 +35,18 @@
 
 .negrita {
     font-weight: 700 !important;
+    text-align: left;
+    color: #444;
+    font-size: 32px;
+    text-align: center;
+}
+
+.negri {
+    font-weight: 700 !important;
+    text-align: left;
+    color: #444;
+    font-size: 20px !important;
+    text-align: center;
 }
 
 .quitpoint {
@@ -54,7 +66,14 @@
 }
 
 .boto {
-    background-color: #dc9700 !important;
+    background-color: #c64446 !important;
+    border-color: #c64446 !important;
+    color: #fff !important;
+}
+
+.boto:hover {
+    background-color: #354d95 !important;
+    border-color: #354d95 !important;
     color: #fff !important;
 }
 
@@ -78,14 +97,14 @@
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);
     -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out
+    transition: all 0.4s ease-in-out;
 }
 
 .hovereffects img {
     display: block;
     position: relative;
-    -webkit-transition: all .4s linear;
-    transition: all .4s linear;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
 }
 
 .hovereffects h2 {
@@ -98,8 +117,8 @@
     -webkit-transform: translateY(-100px);
     -ms-transform: translateY(-100px);
     transform: translateY(-100px);
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     padding: 10px;
 }
 
@@ -108,19 +127,19 @@
     display: inline-block;
     text-transform: uppercase;
     color: #fff;
-    border: 1px solid #dc9700;
-    background-color: #dc9700;
+    border: 1px solid #c64446;
+    background-color: #c64446;
     opacity: 2;
     filter: alpha(opacity=0);
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     margin: 118px 0 0;
     padding: 7px 14px;
     letter-spacing: 1pt;
 }
 
 .hovereffects a.info:hover {
-    box-shadow: 0 0 5px #dc9700;
+    box-shadow: 0 0 5px #c64446;
 }
 
 .hovereffects:hover img {
@@ -144,8 +163,8 @@
 }
 
 .hovereffects:hover a.info {
-    -webkit-transition-delay: .2s;
-    transition-delay: .2s;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
 }
 
 
@@ -450,14 +469,15 @@ ol {
 }
 
 .top-nav {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #dc3545;
+    background-color: #dc3545;
 }
 
 .top-nav .tn-left li {
     list-style: none;
     display: inline-block;
     font-size: 16px;
-    color: #19191a;
+    color: #fff;
     font-weight: 500;
     padding: 14px 0 12px;
     margin-right: 64px;
@@ -483,7 +503,7 @@ ol {
 }
 
 .top-nav .tn-left li i {
-    color: #c64446;
+    color: #fff;
     margin-right: 4px;
 }
 
@@ -500,7 +520,7 @@ ol {
 .top-nav .tn-right .top-social a {
     display: inline-block;
     font-size: 16px;
-    color: #c64446;
+    color: #fff;
     margin-left: 15px;
 }
 
@@ -577,7 +597,7 @@ ol {
 }
 
 .top-nav .tn-right .language-option .flag-dropdown ul li a:hover {
-    color: #c64446;
+    color: #dc3545;
 }
 
 .menu-item {
@@ -752,7 +772,7 @@ ol {
     background: #ffffff;
     padding: 44px 40px 50px 40px;
     border-radius: 10px;
-    box-shadow: #354d95cc 0.1em 0.1em 0.1em 0.1em;
+    box-shadow: #dc354561 0.1em 0.1em 0.1em 0.1em;
 }
 
 .booking-form h3 {
@@ -837,11 +857,11 @@ ol {
     display: block;
     font-size: 14px;
     text-transform: uppercase;
-    border: 1px solid #a14143;
+    border: 1px solid #dc3545;
     border-radius: 2px;
     color: #fbfafb;
     font-weight: 500;
-    background: #c64446;
+    background: #dc3545;
     width: 100%;
     height: 46px;
     margin-top: 30px;
@@ -1253,7 +1273,7 @@ ol {
     width: 100%;
     height: 50px;
     border-radius: 2px;
-    background: #393D4A;
+    background: #393d4a;
     border: none;
     padding-left: 20px;
     font-size: 16px;
@@ -1578,7 +1598,7 @@ ol {
 .room-pagination a {
     font-size: 16px;
     color: #707079;
-    border: 1px solid #EFD4B9;
+    border: 1px solid #efd4b9;
     border-radius: 2px;
     padding: 7px 13px 5px;
     margin-right: 7px;
@@ -2264,7 +2284,7 @@ ol {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 5px 24px;
-    border: 1px solid #F9EEE3;
+    border: 1px solid #f9eee3;
     border-radius: 50px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -2690,7 +2710,7 @@ ol {
     .offcanvas-menu-wrapper .slicknav_menu .slicknav_nav ul li a:hover {
         border-radius: 0;
         background: transparent;
-        color: #dfa974;
+        color: #dc3545;
     }
     .offcanvas-menu-wrapper .slicknav_menu .slicknav_nav .slicknav_row a {
         border-bottom: 0;
@@ -2881,5 +2901,98 @@ ol {
     }
     .ocultar-text {
         display: none;
+    }
+}
+
+
+/* --- --- CAROUSEL --- --- */
+
+.carousel__contenedor {
+    position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: #dc3545;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+    opacity: 100%;
+    color: #354d95;
+}
+
+.carousel__anterior {
+    left: -30px;
+    margin-left: -25px;
+}
+
+.carousel__siguiente {
+    right: -30px;
+}
+
+.carousel__lista {
+    overflow: hidden;
+}
+
+.carousel__elemento {
+    text-align: center;
+    margin-right: 25px;
+    width: 300px;
+}
+
+.carousel__indicadores .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #dc3545;
+    opacity: .2;
+    border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+    opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+    opacity: 1;
+}
+
+.caruima {
+    height: 325px;
+    border: 1px solid #CCCCCC;
+    cursor: pointer;
+    border-radius: 12px;
+    animation: scroll 40s linear infinite;
+}
+
+.caruima:hover {
+    box-shadow: 0.5px 0.5px 7px 1.5px #414040;
+    animation-play-state: paused;
+}
+
+.carstop {
+    animation-play-state: paused;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        padding: 40px 0;
+    }
+    .contenido-principal {
+        flex-direction: column;
+    }
+    .contenido-principal>* {
+        width: 100%;
     }
 }

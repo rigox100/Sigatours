@@ -187,13 +187,12 @@ class Destinos {
 
     public static function recuperarPromocionesPublicadas() {
         $conexion = new Conexion();
-        $consulta = $conexion->prepare('SELECT * FROM promociones WHERE visible = 1 ORDER BY idPromocion DESC');
+        $consulta = $conexion->prepare('SELECT * FROM destinos WHERE visible = 1 ORDER BY idPromocion DESC');
         $consulta->execute();
         $registros = $consulta->fetchAll();
   
         $conexion = null;
         return $registros;
     }
-
 
 }
