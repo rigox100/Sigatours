@@ -140,8 +140,8 @@ if($_SESSION['idRol']== null){
               </li>
               <li class="nav-item">
                 <a href="modules/destinos/index.php" class="nav-link">
-                  <i class="fas fa-tags"></i>
-                  <p>Destinos</p>
+                  <i class="fa fa-folder-open"></i>
+                  <p>Categoría 1</p>
                 </a>
               </li>
             </ul>

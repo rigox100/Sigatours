@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-06-2021 a las 19:21:30
+-- Tiempo de generación: 03-06-2021 a las 05:13:48
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 7.3.25
 
@@ -70,25 +70,6 @@ CREATE TABLE `agencias` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categorias`
---
-
-CREATE TABLE `categorias` (
-  `idCategoria` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `visible` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `categorias`
---
-
-INSERT INTO `categorias` (`idCategoria`, `nombre`, `visible`) VALUES
-(1, 'Hotel + Vuelo en Sigatours', 1);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `destinos`
 --
 
@@ -109,14 +90,7 @@ CREATE TABLE `destinos` (
 --
 
 INSERT INTO `destinos` (`idPromocion`, `titulo`, `url_imagen1`, `descripcion`, `fecha_publicacion`, `visible`, `servicio`, `hotel`, `precio`) VALUES
-(1, 'Compra tu Hotel + Vuelo en Sigatours', 'uploads/images/20210611031156_promocion.jpg', '', '2021-06-22', 1, NULL, NULL, NULL),
-(3, 'as', 'uploads/images/20210624165809_promocion.jpg', '', '2021-06-24', 1, NULL, NULL, NULL),
-(4, 'tres', 'uploads/images/20210624170928_promocion.jpg', '', '2021-06-24', 1, NULL, NULL, NULL),
-(5, 'cuatro', 'uploads/images/20210624171155_promocion.jpg', '', '2021-06-24', 1, NULL, NULL, NULL),
-(6, 'five', 'uploads/images/20210624171254_promocion.jpg', '', '2021-06-24', 1, NULL, NULL, NULL),
-(7, 'six', 'uploads/images/20210624171909_promocion.jpg', '', '2021-06-24', 1, NULL, NULL, NULL),
-(8, 'seven', 'uploads/images/20210624171928_promocion.jpg', '', '2021-06-24', 1, NULL, NULL, NULL),
-(9, 'eight', 'uploads/images/20210624172004_promocion.jpg', '', '2021-06-25', 1, NULL, NULL, NULL);
+(1, 'uno', 'uploads/images/20210603050219_promocion.jpg', '', '2021-06-03', 1, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -152,10 +126,7 @@ INSERT INTO `franquicias` (`idFranquicia`, `nombre_completo`, `email`, `ciudad`,
 (11, 'test', 'test@test.com.mx', 'Acámbaro', 'test', 'asdf', NULL),
 (12, 'prueba', 'test@test.com.mx', 'test', 'test', 'test', NULL),
 (13, 'test9', 'admin@miacambaro.mx', 'Acámbaro', 'test', 'fh', NULL),
-(15, 'test6', 'admin@miacambaro.mx', 'Acámbaro', 'test2', 'asda', NULL),
-(16, 'rigo', 'rigox100@gmail.com', 'acambaro', '417test', 'rigo', '2021-06-11'),
-(17, 'hola', 'rigox100@gmail.com', 'prueba', 'prueba', 'prueba', '2021-06-11'),
-(18, 'adio', 'rigox100@gmail.com', 'prueba', 'prueba', 'probando', '2021-06-11');
+(14, '', '', '', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -180,9 +151,9 @@ CREATE TABLE `promociones` (
 --
 
 INSERT INTO `promociones` (`idPromocion`, `titulo`, `url_imagen1`, `descripcion`, `fecha_publicacion`, `visible`, `servicio`, `hotel`, `precio`) VALUES
-(8, 'uno', 'uploads/images/20210611031547_promocion.jpg', '', '2021-06-11', 1, NULL, NULL, NULL),
-(9, 'dos', 'uploads/images/20210611031534_promocion.jpg', '', '2021-06-11', 1, NULL, NULL, NULL),
-(11, 'tres', 'uploads/images/20210611031517_promocion.jpg', '', '2021-06-11', 1, NULL, NULL, NULL);
+(8, 'uno', 'uploads/images/20210601042027_promocion.jpg', '', '2021-06-01', 1, NULL, NULL, NULL),
+(9, 'dos', 'uploads/images/20210601042044_promocion.jpg', '', '2021-06-01', 1, NULL, NULL, NULL),
+(10, 'tres', 'uploads/images/20210601042101_promocion.jpg', '', '2021-06-01', 1, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -219,14 +190,6 @@ CREATE TABLE `slider` (
   `fecha_publicacion` date NOT NULL,
   `visible` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `slider`
---
-
-INSERT INTO `slider` (`idSlider`, `titulo`, `url_imagen1`, `descripcion`, `fecha_publicacion`, `visible`) VALUES
-(12, '', 'uploads/images/20210619021224_slider.jpg', '', '2021-06-19', 1),
-(13, '', 'uploads/images/20210619021345_slider.jpg', '', '2021-06-19', 1);
 
 -- --------------------------------------------------------
 
@@ -274,12 +237,6 @@ DELIMITER ;
 --
 ALTER TABLE `agencias`
   ADD PRIMARY KEY (`idAgencia`);
-
---
--- Indices de la tabla `categorias`
---
-ALTER TABLE `categorias`
-  ADD PRIMARY KEY (`idCategoria`);
 
 --
 -- Indices de la tabla `destinos`
@@ -330,28 +287,22 @@ ALTER TABLE `agencias`
   MODIFY `idAgencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT de la tabla `categorias`
---
-ALTER TABLE `categorias`
-  MODIFY `idCategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT de la tabla `destinos`
 --
 ALTER TABLE `destinos`
-  MODIFY `idPromocion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idPromocion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `franquicias`
 --
 ALTER TABLE `franquicias`
-  MODIFY `idFranquicia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `idFranquicia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `promociones`
 --
 ALTER TABLE `promociones`
-  MODIFY `idPromocion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idPromocion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -363,7 +314,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `idSlider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idSlider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
