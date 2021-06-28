@@ -233,8 +233,7 @@
 
                     </div>
                 <?php endforeach; ?>
-            <?php else : ?>
-                <p class="alert alert-info"> No hay imagenes para el slider </p>
+      
             <?php endif; ?>
 
         </div>
