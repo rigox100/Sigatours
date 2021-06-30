@@ -389,6 +389,7 @@
                                 <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-172-6927 </li>
                                 <li><i class="fa fa-envelope icolor"></i>&nbsp; reservaciones@sigatours.com</li>
                                 <li><i class="fa fa-address-book-o icolor"></i>&nbsp; Calle Sinaloa # 16 Colonia San Isidro II<br> C.P. 38670. Acámbaro, Gto.</li>
+                          
                                 <li>
                                     <div class="logos mt-4">
                                         <a href="#"><img src="img/gto.png" alt=""></a>
@@ -397,7 +398,6 @@
                                         <a href="#"><img src="img/sectur.png" alt=""></a>
                                     </div>
                                 </li>
-
 
                             </ul>
                         </div>
