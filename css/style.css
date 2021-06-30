@@ -1250,6 +1250,21 @@ ol {
     list-style: none;
 }
 
+.footer-section .footer-text .ft-contact ul li .logos a {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #c64446;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-right: 7px;
+}
+
 .footer-section .footer-text .ft-newslatter h6 {
     font-size: 14px;
     color: #dfa974;

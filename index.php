@@ -126,7 +126,7 @@
                     <div class="col-lg-2">
                         <div class="logo">
                             <a href="./index.php">
-                                <img src="img/logo.png" class="img-fluid" alt="">
+                                <img src="img/logo.png"  class="img-fluid" alt="">
                             </a>
                         </div>
                     </div>
@@ -233,7 +233,7 @@
 
                     </div>
                 <?php endforeach; ?>
-      
+
             <?php endif; ?>
 
         </div>
@@ -258,9 +258,9 @@
 
                         if (count($cate) > 0) :
                         ?>
-                        <?php foreach ($cate as $item) : ?>
-                            <h3 class="negrita"><?php echo $item['nombre']; ?></h3>
-                        <?php endforeach; ?>
+                            <?php foreach ($cate as $item) : ?>
+                                <h3 class="negrita"><?php echo $item['nombre']; ?></h3>
+                            <?php endforeach; ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -368,7 +368,8 @@
                                     <img src="img/logo.png" alt="" height="61px">
                                 </a>
                             </div>
-                            <p>Visitanos en nuestras redes sociales</p>
+
+                            <p class="mt-4">Visitanos en nuestras redes sociales</p>
                             <div class="fa-social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
@@ -376,6 +377,8 @@
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                                 <a href="#"><i class="fa fa-youtube-play"></i></a>
                             </div>
+
+
                         </div>
                     </div>
                     <div class="col-lg-4 offset-lg-1">
@@ -386,21 +389,20 @@
                                 <li><i class="fa fa-phone icolor"></i>&nbsp; (52) 417-172-6927 </li>
                                 <li><i class="fa fa-envelope icolor"></i>&nbsp; reservaciones@sigatours.com</li>
                                 <li><i class="fa fa-address-book-o icolor"></i>&nbsp; Calle Sinaloa # 16 Colonia San Isidro II<br> C.P. 38670. Acámbaro, Gto.</li>
+                                <li>
+                                    <div class="logos mt-4">
+                                        <a href="#"><img src="img/gto.png" alt=""></a>
+                                        <a href="#"><img src="img/one.png" alt=""></a>
+                                        <a href="#"><img src="img/two.png" alt=""></a>
+                                        <a href="#"><img src="img/sectur.png" alt=""></a>
+                                    </div>
+                                </li>
 
 
                             </ul>
                         </div>
                     </div>
-                    <!-- <div class="col-lg-3 offset-lg-1">
-                        <div class="ft-newslatter">
-                            <h6>Suscribetet</h6>
-                            <p>Obtenga las áctualizaciones y ofertas</p>
-                            <form action="#" class="fn-form">
-                                <input type="text" placeholder="Email">
-                                <button type="submit"><i class="fa fa-send"></i></button>
-                            </form>
-                        </div>
-                    </div> -->
+              
                 </div>
             </div>
         </div>
