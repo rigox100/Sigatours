@@ -1,9 +1,9 @@
 <?php
-require_once '../../class/Destinos.php';
-require_once '../../class/Categoria.php';
+require_once '../../class/DestinosDos.php';
+require_once '../../class/CategoriaDos.php';
 include_once '../../assets/template/header.php';
-$promociones = Destinos::recuperarTodos();
-$categoria = Categoria::recuperarTodos();
+$promociones = DestinosDos::recuperarTodos();
+$categoria = CategoriaDos::recuperarTodos();
 ?>
 
 <!-- Main content -->

@@ -144,6 +144,13 @@ if($_SESSION['idRol']== null){
                   <p>Categoría 1</p>
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a href="modules/category_two/index.php" class="nav-link">
+                  <i class="fa fa-bed"></i>
+                  <p>Categoría 2</p>
+                </a>
+              </li>
             </ul>
           </li>
         </ul>

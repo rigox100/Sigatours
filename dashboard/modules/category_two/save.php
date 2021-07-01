@@ -1,12 +1,12 @@
 <?php
-require_once '../../class/Destinos.php';
+require_once '../../class/DestinosDos.php';
 $idPromocion = (isset($_REQUEST['idPromocion'])) ? $_REQUEST['idPromocion'] : null;
 
     if($idPromocion){        
-        $promocion = Destinos::buscarPorId($idPromocion);   
+        $promocion = DestinosDos::buscarPorId($idPromocion);   
           
     }else{
-        $promocion = new Destinos(); 
+        $promocion = new DestinosDos(); 
        
     }
 

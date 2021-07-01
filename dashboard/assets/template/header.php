@@ -140,12 +140,13 @@ if($_SESSION['idRol']== null){
                   <p>Categoría 1</p>
                 </a>
               </li>
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a href="../category_two/index.php" class="nav-link">
                   <i class="fa fa-bed"></i>
                   <p>Categoría 2</p>
                 </a>
               </li>
+              <!-- 
               <li class="nav-item">
                 <a href="../destinos/index.php" class="nav-link">
                   <i class="fa fa-plane"></i>

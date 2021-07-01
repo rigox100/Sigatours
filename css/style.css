@@ -3000,6 +3000,64 @@ ol {
     animation-play-state: paused;
 }
 
+
+/* =================Categoría 2========================== */
+
+.carousel__anteriors,
+.carousel__siguientes {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: #dc3545;
+}
+
+.carousel__anteriors:hover,
+.carousel__siguientes:shover {
+    opacity: 100%;
+    color: #354d95;
+}
+
+.carousel__anteriors {
+    left: -30px;
+    margin-left: -25px;
+}
+
+.carousel__siguientes {
+    right: -30px;
+}
+
+.carousel__listas {
+    overflow: hidden;
+}
+
+.carousel__indicadoress .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #dc3545;
+    opacity: .2;
+    border-radius: 0;
+}
+
+.carousel__indicadoress .glider-dot:hover {
+    opacity: .5;
+}
+
+.carousel__indicadoress .glider-dot.active {
+    opacity: 1;
+}
+
+.secti {
+    background: #d4dade6e !important;
+}
+
 @media screen and (max-width: 800px) {
     body {
         padding: 40px 0;

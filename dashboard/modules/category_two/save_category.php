@@ -1,12 +1,12 @@
 <?php
-require_once '../../class/Categoria.php';
+require_once '../../class/CategoriaDos.php';
 $idCategoria = (isset($_REQUEST['idCategoria'])) ? $_REQUEST['idCategoria'] : null;
 
     if($idCategoria){        
-        $categoria = Categoria::buscarPorId($idCategoria);   
+        $categoria = CategoriaDos::buscarPorId($idCategoria);   
           
     }else{
-        $categoria = new Categoria(); 
+        $categoria = new CategoriaDos(); 
        
     }
 

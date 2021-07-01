@@ -349,10 +349,115 @@
     </section>
 
 
+    
+
+<!-- =========================== Categoría 2=========================================== -->
+
+<section class="secti spad " id="destinos">
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="section-title">
+                <?php
+                include_once './dashboard/class/CategoriaDos.php';
+                $cate = CategoriaDos::recuperarCategoriasPublicadas();
+
+                if (count($cate) > 0) :
+                ?>
+                    <?php foreach ($cate as $item) : ?>
+                        <h3 class="negrita"><?php echo $item['nombre']; ?></h3>
+                    <?php endforeach; ?>
+            </div>
+        </div>
+    <?php endif; ?>
+    </div>
 
 
 
 
+    <?php
+    include_once './dashboard/class/DestinosDos.php';
+    $promo = DestinosDos::recuperarPromocionesPublicadas();
+
+    if (count($promo) > 0) :
+    ?>
+
+
+
+        <div class="carousel">
+            <div class="carousel__contenedor">
+                <button aria-label="Anterior" class="carousel__anteriors">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+
+                <div class="carousel__listas" id="carousel__listas">
+                    <?php foreach ($promo as $item) : ?>
+                        <div class="carousel__elemento">
+                            <div class="hovereffects">
+                                <img src="./dashboard/modules/category_two/<?php echo $item['url_imagen1']; ?>" alt="destinos" class="img-fluid caruima">
+                                <div class="overlay">
+
+                                    <a class="info" href="#" data-toggle="modal" data-target="#myModalDos<?php echo $item[0]; ?>">Más Información...</a>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+
+                <button aria-label="Siguiente" class="carousel__siguientes">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div role="tablist" class="carousel__indicadoress"></div>
+
+
+
+        <?php endif; ?>
+        </div>
+        <?php foreach ($promo as $item) : ?>
+            <div class="modal fade carstop" id="myModalDos<?php echo $item[0]; ?>" tabindex="-1" role="dialog">
+                <div class="modal-dialog ">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="">
+                                <img src="img/logo.png" alt="" height="34px">
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="./dashboard/modules/category_two/<?php echo $item['url_imagen1']; ?>" class="img-fluid" width="100%" height="100%">
+                            <hr>
+                            <a class="btn btn-warning boto btn-lg btn-block mt-2" href="./dashboard/modules/category_two/<?php echo $item['descripcion']; ?>" download="Itinerario.pdf" role="button">Descargar Itinerario</a>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        <?php endforeach; ?>
+
+
+
+</div>
+</section>
+
+
+<!-- =========================== Fin Categoría 2=========================================== -->
 
 
 
