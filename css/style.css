@@ -3054,6 +3054,60 @@ ol {
     opacity: 1;
 }
 
+
+/* =================Categoría 3========================== */
+
+.carousel__anteriorss,
+.carousel__siguientess {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: #dc3545;
+}
+
+.carousel__anteriorss:hover,
+.carousel__siguientess:shover {
+    opacity: 100%;
+    color: #354d95;
+}
+
+.carousel__anteriorss {
+    left: -30px;
+    margin-left: -25px;
+}
+
+.carousel__siguientess {
+    right: -30px;
+}
+
+.carousel__listass {
+    overflow: hidden;
+}
+
+.carousel__indicadoresss .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #dc3545;
+    opacity: .2;
+    border-radius: 0;
+}
+
+.carousel__indicadoresss .glider-dot:hover {
+    opacity: .5;
+}
+
+.carousel__indicadoresss .glider-dot.active {
+    opacity: 1;
+}
+
 .secti {
     background: #d4dade6e !important;
 }

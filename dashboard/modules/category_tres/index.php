@@ -1,9 +1,9 @@
 <?php
-require_once '../../class/DestinosDos.php';
-require_once '../../class/CategoriaDos.php';
+require_once '../../class/DestinosTres.php';
+require_once '../../class/CategoriaTres.php';
 include_once '../../assets/template/header.php';
-$promociones = DestinosDos::recuperarTodos();
-$categoria = CategoriaDos::recuperarTodos();
+$promociones = DestinosTres::recuperarTodos();
+$categoria = CategoriaTres::recuperarTodos();
 ?>
 
 <!-- Main content -->
@@ -11,7 +11,7 @@ $categoria = CategoriaDos::recuperarTodos();
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h3 class="text-center"> Administrar Categoría 2</h3>
+        <h3 class="text-center"> Administrar Categoría 3</h3>
 <!-- 
         <a href="save.php" class="btn btn-default btn-custom"> <i class="fas fa-plus"></i> Agregar nuevo destino</a><br><br> -->
 
@@ -70,7 +70,7 @@ $categoria = CategoriaDos::recuperarTodos();
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h3 class="text-center"> Administrar Tarjetas de Categoría 2</h3>
+        <h3 class="text-center"> Administrar Tarjetas de Categoría 3</h3>
 
         <a href="save.php" class="btn btn-default btn-custom"> <i class="fas fa-plus"></i> Agregar nueva tarjeta</a><br><br>
 

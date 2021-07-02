@@ -155,7 +155,7 @@ $categoria = Categoria::recuperarTodos();
 
 
         <?php else : ?>
-          <p class="alert alert-info"> No se encontraron promociones </p>
+          <p class="alert alert-info"> No se encontraron tarjetas </p>
         <?php endif; ?>
 
 
