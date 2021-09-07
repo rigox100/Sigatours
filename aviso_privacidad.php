@@ -249,7 +249,7 @@
                                     <div class="logos mt-4">
                                         <a href="#"><img src="img/gto.png" alt=""></a>
                                         <a href="#"><img src="img/one.png" alt=""></a>
-                                        <a href="#"><img src="img/two.png" alt=""></a>
+                                        <!-- <a href="#"><img src="img/two.png" alt=""></a> -->
                                         <a href="#"><img src="img/sectur.png" alt=""></a>
                                     </div>
                                 </li>

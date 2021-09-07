@@ -72,7 +72,7 @@ function slideAutoPaly(glider, selector, delay = 5000, repeat = true) {
             }
             glider.scrollItem(nextIndex++);
         }, delay);
-    }
+    } 
 
     slide();
 
